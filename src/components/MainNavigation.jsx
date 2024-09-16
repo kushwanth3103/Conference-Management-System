@@ -21,7 +21,7 @@ function MainNavigation(){
             <div className={`${classes.navbarContainer} ${classes.container}`}>
                 <Link to="/" className={classes.navbarLogo} onClick={closeMobileMenu}>
                     <FcConferenceCall className={classes.navbarIcon}/>
-                    Conference Management System
+                    UTA Conference - 2024
                 </Link> 
                 <div className={classes.menuIcon} onClick={handleClick}>
                     {click?<FaTimes/>:<FaBars/>}

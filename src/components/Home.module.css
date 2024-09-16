@@ -1,34 +1,104 @@
-/* Home.module.css */
 .relativeContainer {
-    position: relative; /* Makes this container a positioned ancestor for absolute positioning of child elements */
-}
-
-.coverImage {
-    width: 100%; /* Full width of the image */
-    height: 69vh; /* Maintain the aspect ratio */
-    position: relative; /* Allows the overlay effect for the horizontal scroll container */
-}
-
-.horizontalScrollContainer {
-    display: flex; /* Display children in a horizontal row */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding: 16px; /* Padding around the container */
-    gap: 16px; /* Space between the cards */
-    scroll-snap-type: x mandatory; /* Smooth snapping effect while scrolling */
-    position: absolute; /* Absolute positioning to overlay on the image */
-    bottom: 0; /* Position it at the bottom of the cover image */
-    left: 0; /* Align to the left of the image */
-    right: 0; /* Align to the right of the image */
-    margin: 0 auto; /* Center the container */
-    transform: translateY(50%); /* Adjust the vertical overlap; 50% overlaps half the container height */
-    white-space: nowrap; /* Prevent line breaks within the container */
-}
-
-.horizontalScrollContainer::-webkit-scrollbar {
-    height: 8px; /* Optional: scrollbar height */
-}
-
-.horizontalScrollContainer::-webkit-scrollbar-thumb {
-    background-color: #ddd; /* Optional: scrollbar thumb color */
-    border-radius: 4px; /* Optional: scrollbar thumb rounded corners */
-}
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    width: 100vw; /* Fit the viewport width */
+    min-height: 100vh; /* Set minimum height to viewport height */
+    overflow: auto; /* Allow scrolling if content exceeds the container size */
+    text-align: center;
+    color: white;
+    background-image: url('/background.jpg'); /* Set background image */
+    background-size: cover; /* Ensure the background covers the entire container */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background fixed while scrolling */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    padding-top: 3rem; /* Add padding to create space at the top */
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    z-index: 1; /* Ensure the text is on top of the background image */
+    margin-bottom: 1rem; /* Space below the title */
+  }
+  
+  h4 {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: white;
+    width: 80%;
+    max-width: 500px; /* Limit the width to make the text wrap */
+    z-index: 1;
+    line-height: 1.5; /* Increase line height for better readability */
+    margin-bottom: 2rem; /* Space below the subtitle */
+    text-align: center; /* Center-align the text content */
+    align-self: center; /* Ensure the element is centered in its container */
+    display: flex; /* Flexbox to center-align content vertically */
+    justify-content: center; /* Center-align the text horizontally */
+  }
+  
+  .quickLinksContainer {
+    display: flex;
+    margin-top: 30px;
+    gap: 5rem; /* Space between the quick link cards */
+    justify-content: center;
+    z-index: 1;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .quickLink {
+    background-color: #CEE3FA;
+    border: 1px solid #CEC2C2;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 200px; /* Fixed width for consistency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    margin-bottom: 1rem; /* Add margin at the bottom for spacing */
+  }
+  
+  .quickLink p {
+    margin: 0;
+    font-size: 1em;
+    color: black;
+  }
+  
+  .quickLink a {
+    display: block;
+    align-self: flex-end;
+    margin-top: 0.5rem;
+    color: #007BFF; /* Link color */
+    text-decoration: none;
+  }
+  
+  .quickLink a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em; /* Reduce font size on smaller screens */
+    }
+  
+    h4 {
+      font-size: 1em; /* Adjust font size for better readability */
+      max-width: 90%; /* Use more width on smaller screens */
+      margin-top: 20px;
+    }
+  
+    .quickLinksContainer {
+      gap: 1rem; /* Reduce gap between quick link cards */
+      padding: 0 1rem; /* Add padding to the container on smaller screens */
+    }
+  
+    .quickLink {
+      width: 100%; /* Make quick links take full width on mobile */
+      max-width: 300px; /* Limit max width for better appearance */
+    }
+  }
+  

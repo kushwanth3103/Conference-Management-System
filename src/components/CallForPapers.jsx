@@ -1,13 +1,11 @@
-import { useParams,Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { CONFERENCE_DETAILS } from "../store/conferenceData";
 import conferenceImg from '../assets/conference.png'
 import styles from "./CallForPapers.module.css";
 import Faq from "./Faq";
 
 export default function CallForPapers(){
-    const {conferenceId}=useParams();
-    const conference = CONFERENCE_DETAILS.find((conference) => conference.id === conferenceId); 
-    console.log(conferenceId)
+    const conference = CONFERENCE_DETAILS[0]; 
   
     if (!conference) {
         console.error("Conference not found!");

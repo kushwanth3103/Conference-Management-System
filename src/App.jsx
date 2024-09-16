@@ -26,15 +26,15 @@ const router=createBrowserRouter([
         element:<CareerDevelopmentResources/>
       },
       {
-        path:'call-for-papers/:conferenceId',
+        path:'call-for-papers',
         element:<CallForPapers/>
       },
       {
-        path:'call-for-papers/:conferenceId/submission-portal',
+        path:'call-for-papers/submission-portal',
         element:<SubmissionPortal/>
       },
       {
-        path:'schedule/:conferenceId',
+        path:'schedule',
         element:<Schedule/>
       }
     ]

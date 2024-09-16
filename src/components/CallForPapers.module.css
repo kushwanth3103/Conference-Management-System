@@ -1,115 +1,147 @@
-/* CallForPapers.module.css */
 .callForPapersContainer {
-    display: flex; /* Creates a horizontal flex container */
-    justify-content: space-between; /* Space out items evenly */
-    align-items: flex-start; /* Align items at the start of the container */
-    gap: 20px; /* Adds space between flex items */
-    padding: 20px;
-    max-width: 1200px;
-    margin: 40px auto; /* Centers the container horizontally */
-    background-color: #f0f4f8; /* Light gray-blue background color for the main container */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  display: flex; /* Creates a horizontal flex container */
+  justify-content: space-between; /* Space out items evenly */
+  align-items: flex-start; /* Align items at the start of the container */
+  gap: 20px; /* Adds space between flex items */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 40px auto; /* Centers the container horizontally */
+  background-color: #f0f4f8; /* Light gray-blue background color for the main container */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Styling for the submission guidelines */
+.submissionGuidelines {
+  flex: 1; /* Takes up equal space on the left */
+  padding: 20px;
+  background-color: #e7f0fa; /* Light blue background for guidelines */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Adds a light shadow */
+}
+
+.submissionGuidelines ul {
+  list-style-type: none; /* Removes bullet points from the list */
+  padding: 0;
+  margin: 0;
+  text-align: justify; /* Justifies the text in the guidelines */
+}
+
+.submissionGuidelines li {
+  margin-bottom: 12px; /* Adds space between list items */
+  font-size: 16px;
+  color: #333; /* Darker text color for readability */
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.submissionGuidelines li::before {
+  content: "➤"; /* Adds a custom bullet before each item */
+  position: absolute;
+  left: 0;
+  color: #007BFF; /* Blue color for custom bullet */
+}
+
+.coverImageContainer {
+  flex: 1; /* Takes up equal space in the middle */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  padding: 20px;
+  background-color: #fff; /* White background for the image container */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.coverImage {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Adds rounded corners to the image */
+}
+
+.rightPanel {
+  flex: 1; /* Takes up equal space on the right */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px; /* Adds space between button and dates */
+  padding: 20px;
+}
+
+.submissionButtonContainer {
+  background-color: #d9f2e6; /* Light green background for button container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  width: 100%; /* Full width of the right panel */
+}
+
+.submissionButton {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background for button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  width: 100%; /* Button takes full width of its container */
+  text-align: center;
+}
+
+.submissionButton:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+.importantDatesContainer {
+  background-color: #fdebd3; /* Light orange background for dates container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  width: 100%; /* Full width of the right panel */
+}
+
+.importantDates {
+  text-align: justify; /* Justify text for a clean look */
+  color: #333; /* Darker text color */
+}
+
+.importantDateItem {
+  display: block; /* Each span takes a full line */
+  margin-bottom: 8px; /* Adds space between date items */
+  font-size: 16px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .callForPapersContainer {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 20px; /* Reduce gap between items */
+    padding: 10px; /* Adjust padding for smaller screens */
+    max-width: 100%; /* Allow full width on smaller screens */
+    margin: 20px auto; /* Reduce margin for smaller screens */
   }
-  
-  .submissionGuidelines {
-    flex: 1; /* Takes up equal space on the left */
-    padding: 20px;
-    background-color: #e7f0fa; /* Light blue background for guidelines */
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Adds a light shadow */
-  }
-  
-  .submissionGuidelines ul {
-    list-style-type: none; /* Removes bullet points from the list */
-    padding: 0;
-    margin: 0;
-    text-align: justify; /* Justifies the text in the guidelines */
-  }
-  
-  .submissionGuidelines li {
-    margin-bottom: 12px; /* Adds space between list items */
-    font-size: 16px;
-    color: #333; /* Darker text color for readability */
-    padding-left: 1.2em;
-    position: relative;
-  }
-  
-  .submissionGuidelines li::before {
-    content: "➤"; /* Adds a custom bullet before each item */
-    position: absolute;
-    left: 0;
-    color: #007BFF; /* Blue color for custom bullet */
-  }
-  
-  .coverImageContainer {
-    flex: 1; /* Takes up equal space in the middle */
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    padding: 20px;
-    background-color: #fff; /* White background for the image container */
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  }
-  
-  .coverImage {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: 8px; /* Adds rounded corners to the image */
-  }
-  
+
+  .submissionGuidelines,
+  .coverImageContainer,
   .rightPanel {
-    flex: 1; /* Takes up equal space on the right */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 20px; /* Adds space between button and dates */
-    padding: 20px;
+    width: 100%; /* Make each section take full width */
+    flex: none; /* Remove flex grow/shrink behavior */
+    margin: 0; /* Remove margins on smaller screens */
   }
-  
-  .submissionButtonContainer {
-    background-color: #d9f2e6; /* Light green background for button container */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    display: flex;
-    justify-content: center; /* Centers the button horizontally */
-    width: 100%; /* Full width of the right panel */
+
+  .coverImage {
+    max-width: 90%; /* Adjust image size on smaller screens */
   }
-  
-  .submissionButton {
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green background for button */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 16px;
-    width: 100%; /* Button takes full width of its container */
-    text-align: center;
-  }
-  
-  .submissionButton:hover {
-    background-color: #388e3c; /* Darker green on hover */
-  }
-  
+
+  .submissionButtonContainer,
   .importantDatesContainer {
-    background-color: #fdebd3; /* Light orange background for dates container */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    width: 100%; /* Full width of the right panel */
+    width: 100%; /* Full width for containers */
   }
-  
-  .importantDates {
-    text-align: justify; /* Justify text for a clean look */
-    color: #333; /* Darker text color */
+
+  .submissionButton {
+    font-size: 14px; /* Adjust font size for buttons on smaller screens */
   }
-  
-  .importantDateItem {
-    display: block; /* Each span takes a full line */
-    margin-bottom: 8px; /* Adds space between date items */
-    font-size: 16px;
-  }
-  
+}

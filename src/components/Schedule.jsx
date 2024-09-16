@@ -10,17 +10,16 @@ import { TiExport } from "react-icons/ti";
 
 export default function Schedule() {
   const [selectedDate, setSelectedDate] = useState('');
-  const {conferenceId}=useParams();
   const [dates,setDates]=useState([]);
   useEffect(() => {
-    const conference = CONFERENCE_DETAILS.find((item) => item.id === conferenceId);
+    const conference = CONFERENCE_DETAILS[0];
 
     if (conference && conference.schedule) {
       // Extract dates from the conference schedule
       const uniqueDates = [...new Set(conference.schedule.map((schedule) => schedule.date))];
       setDates(uniqueDates); // Set the unique dates to state
     }
-  }, [conferenceId]);
+  }, []);
   
   console.log(dates)
   const checkDate = (formattedDate) => {
@@ -55,7 +54,7 @@ export default function Schedule() {
         <Calendar tileClassName={handleClassName} onChange={handleChange} value={dates[0]}/>
         <div>
         <button className={classes.exportButton} onClick={()=>{
-            generatePDF(conferenceId)
+            generatePDF('a1')
         }}>Export schedule <TiExport/></button>
       </div>
       </div>
