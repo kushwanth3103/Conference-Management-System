@@ -315,6 +315,25 @@ export const SESSIONS=[{
     "announcement": "Dapifer solum porro sit molestiae. Canis demulceo sono nesciunt aqua. Vobis eius dapifer confero demens sustineo decumbo deludo.",
     "date": "2025-02-03",
     "time": "03:50:24"
+  },
+  {
+    "aid": 5,
+    "cid": 3,
+    "announcement": "Dapifer solum porro sit molestiae. Canis demulceo sono nesciunt aqua. Vobis eius dapifer confero demens sustineo decumbo deludo.",
+    "date": "2025-02-03",
+    "time": "03:50:24"
+  },{
+    "aid": 6,
+    "cid": 3,
+    "announcement": "Dapifer solum porro sit molestiae. Canis demulceo sono nesciunt aqua. Vobis eius dapifer confero demens sustineo decumbo deludo.",
+    "date": "2025-02-03",
+    "time": "03:50:24"
+  },{
+    "aid": 7,
+    "cid": 3,
+    "announcement": "Dapifer solum porro sit molestiae. Canis demulceo sono nesciunt aqua. Vobis eius dapifer confero demens sustineo decumbo deludo.",
+    "date": "2025-02-03",
+    "time": "03:50:24"
   }]
 
   export const RECORDINGS=[
@@ -354,3 +373,68 @@ export const SESSIONS=[{
       "date": "2023-12-19"
     }
 ]
+
+
+export const PAPERS=[
+    {
+        "pid": 1,
+        "title": "Optimizing Cloud Resource Allocation for Enhanced Performance",
+        "abstract": "This paper explores various techniques to dynamically allocate cloud resources to meet fluctuating workloads. By leveraging machine learning algorithms, the study aims to optimize cloud infrastructure costs while ensuring performance and availability."
+    },
+    {
+        "pid": 2,
+        "title": "Serverless Architecture: Unlocking Scalability and Cost Efficiency",
+        "abstract": "This paper discusses the benefits of adopting serverless architecture in cloud computing. It provides insights into how serverless solutions, such as AWS Lambda and Azure Functions, enable developers to focus on code while the infrastructure scales automatically."
+    },
+    {
+        "pid": 3,
+        "title": "A Comparative Study of Multi-cloud vs. Hybrid Cloud Strategies",
+        "abstract": "The paper compares the pros and cons of multi-cloud and hybrid cloud approaches. It highlights key decision factors such as vendor lock-in, disaster recovery, and regulatory compliance when selecting the right cloud strategy for enterprises."
+    },
+    {
+        "pid": 4,
+        "title": "Enhancing Cloud Security through Zero Trust Architecture",
+        "abstract": "This research explores how Zero Trust Architecture (ZTA) can improve security in cloud environments. It discusses identity-based authentication, micro-segmentation, and real-time threat detection for safeguarding cloud-based applications and data."
+    },
+    {
+        "pid": 5,
+        "title": "Cloud-native Applications: Design Patterns and Best Practices",
+        "abstract": "The study focuses on the development of cloud-native applications using containerization, microservices, and CI/CD pipelines. It outlines best practices for deploying scalable and resilient cloud applications while minimizing downtime."
+    }
+]
+
+export const REVIEWS={
+    "title": "Cloud Computing Research and Development Trend",
+    "abstract": "This paper explores strategies to optimize performance, security, and cost-effectiveness in multi-cloud architectures. It discusses load balancing across multiple cloud providers, data redundancy techniques, and network optimization. The study also evaluates cloud governance models, focusing on challenges such as vendor lock-in, compliance, and disaster recovery strategies.",
+    "keywords": "multi-cloud, load balancing, data redundancy, cloud governance, disaster recovery",
+    "submission_date": "2024-05-24T23:42:16.485Z",
+    "paper_location": "/papers/multi-cloud-optimization.pdf",
+    "reviews": [
+      {
+        "comments": "The topic is highly relevant as enterprises are increasingly adopting multi-cloud strategies. The discussion on governance models adds depth to the paper.",
+        "rating": 4,
+        "relevance": 5
+      },
+      {
+        "comments": "Excellent exploration of cloud optimization techniques. However, the practical examples could be expanded to cover smaller organizations as well.",
+        "rating": 7,
+        "relevance": 8
+      },
+      {
+        "comments": "Interesting read, but the paper lacks quantitative analysis. Including some benchmarks or case studies would improve the quality.",
+        "rating": 3,
+        "relevance": 7
+      },
+      {
+        "comments": "Comprehensive and well-researched. The governance section is particularly insightful, addressing crucial compliance challenges.",
+        "rating": 8,
+        "relevance": 9
+      },
+      {
+        "comments": "The paper offers practical insights into disaster recovery strategies, which are often overlooked. Strong accept for relevance.",
+        "rating": "5 strong accept",
+        "relevance": "5 strong accept"
+      }
+    ]
+  }
+  

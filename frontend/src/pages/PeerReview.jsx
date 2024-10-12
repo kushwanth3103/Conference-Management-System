@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classes from './PeerReview.module.css'; // Import CSS module
 import { useNavigate } from 'react-router-dom';
+import { PAPERS } from '../utils/data';
 
 const PeerReview = () => {
     const [papers, setPapers] = useState([]);
@@ -14,9 +15,10 @@ const PeerReview = () => {
         // Fetch papers from the backend
         const fetchPapers = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/papers');
-                const data = await response.json();
-                setPapers(data);
+                // const response = await fetch('http://localhost:3000/api/papers');
+                // const data = await response.json();
+                // console.log(data[0])
+                setPapers(PAPERS);
             } catch (error) {
                 console.error('Error fetching papers:', error);
             }
@@ -34,8 +36,18 @@ const PeerReview = () => {
         <div className={classes.pageContainer}>
             {/* Header Section */}
             <div className={classes.headerSection}>
-                <h1 className={classes.title}>Review your peer papers</h1>
-                <button className={classes.mySubmissionButton} onClick={handleClick}>My Submission</button>
+                <div className={classes.titleAndText}>
+                    <h1 className={classes.title}>Review your peer papers</h1>
+                    <p className={classes.infoText}>
+                        * Papers assigned based on area of expertise
+                    </p>
+                </div>
+                <button
+                    className={classes.mySubmissionButton}
+                    onClick={handleClick}
+                >
+                    My Submissions
+                </button>
             </div>
 
             {/* Peer Papers List */}

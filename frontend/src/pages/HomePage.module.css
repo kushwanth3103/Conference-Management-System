@@ -1,164 +1,139 @@
+/* Main Container */
 .announcementContainer {
-    height: 100vh;
+    min-height: 100vh; /* Use min-height instead of height */
     display: flex;
-    padding: 2.5rem; /* Equivalent to p-10 in Tailwind */
+    flex-direction: column; /* Stack vertically for smaller screens */
+    padding: 2.5rem;
     background-color: #f0f8ff;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
+/* Layout Wrapper for Left and Right Sections */
+.layoutWrapper {
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Left Section (Content Wrapper) */
 .contentWrapper {
+    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%; /* Ensure full width on smaller screens */
 }
 
+/* Conference Information */
 .conferenceInfo {
     text-align: center;
     color: white;
-    padding: 3rem; /* Equivalent to py-12 in Tailwind */
-    border-radius: 0.75rem; /* Equivalent to rounded-lg */
+    padding: 3rem;
+    border-radius: 0.75rem;
 }
 
-.conferenceTitle {
-    font-size: 3rem; /* Equivalent to text-5xl */
-    font-weight: bold; /* Equivalent to font-bold */
-}
-
-.conferenceDescription {
-    margin-top: 1rem; /* Equivalent to mt-4 */
-    font-size: 1.125rem; /* Equivalent to text-lg */
-}
-
-.conferenceButton {
-    margin-top: 2rem; /* Equivalent to mt-8 */
-    padding: 0.75rem 1.5rem; /* Equivalent to px-6 py-3 */
-    background-color: #1d4ed8; /* Equivalent to bg-blue-600 */
-    color: white;
-    border-radius: 9999px; /* Equivalent to rounded-full */
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.conferenceButton:hover {
-    background-color: #1e40af; /* Equivalent to hover:bg-blue-700 */
-}
-
+/* Grid Container for Options */
 .gridContainer {
     display: flex;
     justify-content: space-between;
-    gap: 2rem; /* Equivalent to gap-8 */
-    margin-top: 3rem; /* Equivalent to mt-12 */
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
 }
 
 .optionCard {
-    background-color: #e0f2fe; /* Equivalent to bg-blue-100 */
-    padding: 1.5rem; /* Equivalent to p-6 */
-    border-radius: 0.75rem; /* Equivalent to rounded-lg */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-lg */
+    background-color: #e0f2fe;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 30%; /* Ensure equal width for all cards */
-}
-
-.optionTitle {
-    font-size: 1.125rem; /* Equivalent to text-lg */
-    font-weight: bold; /* Equivalent to font-bold */
-    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+    width: 30%; /* Ensure equal width for larger screens */
+    flex-grow: 1; /* Make them take up space evenly */
 }
 
 .optionLink {
-    color: #1d4ed8; /* Equivalent to text-blue-500 */
-    font-weight: 600; /* Equivalent to font-semibold */
-    margin-top: 1rem; /* Equivalent to mt-4 */
+    color: #1d4ed8;
+    font-weight: 600;
+    margin-top: 1rem;
     display: inline-block;
     text-decoration: none;
 }
 
+/* Right Section (News Section) */
 .newsSection {
-    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-    padding: 1.5rem; /* Equivalent to p-6 */
-    border-radius: 0.75rem; /* Equivalent to rounded-lg */
-    width: 33%;
-    max-height: 100%; /* Full height so it touches the bottom */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent */
+    padding: 1.0rem;
+    border-radius: 0.75rem;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 30px;
+    max-height: 600px; /* Full height */
+    min-height: 100px; /* Ensure it doesn’t shrink too much */
+    
 }
 
 .newsTitle {
-    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-size: 1.5rem;
     text-align: center;
-    font-weight: 600; /* Equivalent to font-semibold */
-    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-.announcementContent {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Space between announcements */
-    flex-grow: 1; /* Allow content to grow and fill space */
+/* Announcement Item with White Background */
+.announcementItem {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #9ca3af;
 }
-.loadingSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.spinner {
-    width: 1.5rem; /* Equivalent to w-6 */
-    height: 1.5rem; /* Equivalent to h-6 */
-    border: 0.25rem solid #1d4ed8; /* Equivalent to text-blue-600 */
-    border-top-color: transparent;
-    border-radius: 9999px; /* Equivalent to rounded-full */
-    animation: spin 1s linear infinite;
+.announcementTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .layoutWrapper {
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .gridContainer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .newsSection {
+        margin-top: 2rem;
+        width: 100%; /* Full width */
+        min-height: 200px; /* Ensure the height is sufficient */
     }
 }
 
-.loadingText {
-    margin-top: 0.75rem; /* Equivalent to mt-3 */
-    color: #6b7280; /* Equivalent to text-gray-500 */
-    font-size: 0.875rem; /* Equivalent to text-sm */
-}
+@media (max-width: 480px) {
+    .conferenceInfo {
+        padding: 2rem;
+    }
 
-.announcementItem {
-    background-color: white;
-    padding: 1rem; /* Equivalent to p-4 */
-    border-bottom: 1px solid #9ca3af; /* Equivalent to border-b border-gray-400 */
-}
+    .conferenceTitle {
+        font-size: 2rem;
+    }
 
-.announcementTitle {
-    font-size: 1.125rem; /* Equivalent to text-lg */
-    font-weight: bold; /* Equivalent to font-bold */
-}
+    .optionCard {
+        width: 100%; /* Full width for smaller screens */
+    }
 
-.announcementDetails {
-    margin-top: 0.5rem; /* Equivalent to mt-2 */
-    font-size: 0.875rem; /* Equivalent to text-sm */
-    color: #6b7280; /* Equivalent to text-gray-500 */
+    .newsSection {
+        max-height: 300px; /* Prevent shrinking */
+    }
 }
-
-.noAnnouncements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 200px; /* Equivalent to a fixed height if no announcements */
-}
-
-.noAnnouncementsIcon {
-    font-size: 2.5rem; /* Equivalent to text-4xl */
-    color: #9ca3af; /* Equivalent to text-gray-400 */
-}
-
-.noAnnouncementsText {
-    margin-top: 1rem; /* Equivalent to mt-4 */
-    color: #6b7280; /* Equivalent to text-gray-500 */
-}
-

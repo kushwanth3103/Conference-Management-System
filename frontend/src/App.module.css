@@ -1,4 +1,6 @@
 /* Main app container, ensuring minimum height covers at least 100% of the viewport */
+
+
 .appContainer {
     min-height: 100vh;
     display: flex;
@@ -10,7 +12,6 @@
   /* Main content area with padding */
   .mainContent {
     flex-grow: 1;
-    /*padding: 2rem 1.5rem;*/
     background-color: white; /* Optional, but ensures consistency */
   }
   

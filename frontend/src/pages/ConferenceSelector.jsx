@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import styles from './ConferenceSelector.module.css'; // Import the CSS module
 import { CONFERENCES } from '../utils/dataConferences';
 import generatePDF from '../utils/pdfGenerator';
-import { useNavigate } from 'react-router-dom';
 
 const ConferenceSelector = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date(2024, 9, 1));

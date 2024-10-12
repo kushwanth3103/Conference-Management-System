@@ -1,3 +1,4 @@
+/* Page Container */
 .pageContainer {
     min-height: 100vh;
     background-color: #f9fafb;
@@ -10,6 +11,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+}
+
+.titleAndText {
+    display: flex;
+    flex-direction: column; /* Stack title and paragraph vertically */
+    gap: 0.5rem;
 }
 
 .title {
@@ -17,6 +25,13 @@
     font-weight: bold;
 }
 
+.infoText {
+    font-size: 0.875rem;
+    color: #6b7280; /* Text color matching the design */
+    margin-top: 0.25rem;
+}
+
+/* Submission Button */
 .mySubmissionButton {
     background-color: #6b46c1;
     color: white;
@@ -25,10 +40,27 @@
     font-weight: 600;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    margin-left: auto; /* Push button to the far right */
 }
 
 .mySubmissionButton:hover {
     background-color: #553c9a;
+}
+
+/* Custom Paragraph Section */
+.customParagraphContainer {
+    background-color: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customParagraphContainer p {
+    margin-bottom: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 /* Papers List */
@@ -38,27 +70,37 @@
     gap: 1.5rem;
 }
 
+/* Paper Item Styling */
 .paperItem {
     background-color: white;
     padding: 1.5rem;
     border-radius: 0.75rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure button is pushed to the right */
+    flex-wrap: nowrap; /* Prevent content wrapping */
+    gap: 1rem; /* Add spacing between content and button */
 }
 
+/* Content of the Paper */
+.paperContent {
+    flex: 1; /* Allow the content to take available space */
+}
+
+/* Paper Title */
 .paperTitle {
     font-size: 1.25rem;
     font-weight: 600;
 }
 
+/* Paper Abstract */
 .paperAbstract {
     margin-top: 0.5rem;
     color: #4b5563;
 }
 
+/* Review Button */
 .reviewButton {
     background-color: #6b46c1;
     color: white;
@@ -67,8 +109,10 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
     text-decoration: none;
+    white-space: nowrap; /* Prevent button text from wrapping */
 }
 
+/* Hover Effect for Review Button */
 .reviewButton:hover {
     background-color: #553c9a;
 }
@@ -122,10 +166,6 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .pageContainer {
-        padding: 2rem;
-    }
-
     .headerSection {
         flex-direction: column;
         align-items: flex-start;
@@ -141,8 +181,12 @@
     }
 
     .paperItem {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row; /* Ensure row layout on tablets */
+        align-items: center;
+    }
+
+    .reviewButton {
+        margin-left: auto; /* Keep the button aligned right */
     }
 
     .noPapersBox {
@@ -155,11 +199,6 @@
         padding: 1.5rem;
     }
 
-    .headerSection {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .title {
         font-size: 1.5rem;
     }
@@ -170,8 +209,12 @@
     }
 
     .paperItem {
-        flex-direction: column;
-        gap: 0.75rem;
+        flex-direction: column; /* Stack content on mobile */
+        align-items: stretch;
+    }
+
+    .reviewButton {
+        align-self: flex-end; /* Align the button to the right on mobile */
     }
 
     .paperTitle {

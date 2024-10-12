@@ -55,6 +55,34 @@
   }
 }
 
+/* Additional styling for even smaller screens (below 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 32px 8px; /* Further reduce padding for very small screens */
+  }
+
+  .contactTitle {
+    font-size: 1.25rem; /* Smaller font for titles */
+  }
+
+  .formTitle {
+    font-size: 1.75rem; /* Reduce font size for form title */
+  }
+
+  .formSubtitle {
+    font-size: 0.875rem; /* Reduce subtitle font size */
+    margin-bottom: 24px;
+  }
+
+  .submitButton {
+    padding: 10px 0; /* Reduce padding on submit button */
+  }
+
+  .mapPlaceholder {
+    height: 100px; /* Smaller height for map placeholder */
+  }
+}
+
 /* Contact Info Titles and spacing */
 .contactTitle {
   font-size: 1.5rem;
@@ -158,9 +186,10 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Radio button group */
+/* Responsive Radio button group */
 .radioGroup {
   display: flex;
+  flex-direction: column; /* Stack vertically by default */
   gap: 16px;
   margin-top: 8px;
 }
@@ -180,6 +209,30 @@
 .radioLabel {
   font-size: 0.875rem;
   color: #4b5563;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .radioGroup {
+    flex-direction: row; /* Align horizontally on larger screens */
+    gap: 24px;
+  }
+}
+
+/* Media query for smaller screens (below 480px) */
+@media (max-width: 480px) {
+  .radioInput {
+    height: 20px; /* Increase size for better tap target on small screens */
+    width: 20px;
+  }
+
+  .radioLabel {
+    font-size: 1rem; /* Increase font size for better readability */
+  }
+
+  .radioItem {
+    gap: 12px; /* Adjust gap for smaller screens */
+  }
 }
 
 /* Submit button */

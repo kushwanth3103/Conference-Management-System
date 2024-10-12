@@ -106,10 +106,11 @@ const CareerDevelopment = () => {
         <div className={classes.jobBoard}>
           <h2 className={classes.jobBoardTitle}>Job Board with Academic Opportunities</h2>
           {jobs.length > 0 ? (
+            <div className={classes.jobTableContainer}>
               <table className={classes.jobTable}>
                 <thead>
                 <tr className={classes.tableHeader}>
-                  <th className={classes.tableCell}>Job Title</th>
+                  <th className={classes.tableCell} >Job Title</th>
                   <th className={classes.tableCell}>Institution</th>
                   <th className={classes.tableCell}>Location</th>
                   <th className={classes.tableCell}>Link</th>
@@ -130,6 +131,7 @@ const CareerDevelopment = () => {
                 ))}
                 </tbody>
               </table>
+            </div>
           ) : (
               <div className={classes.noJobs}>
                 <div className={classes.noJobsCard}>

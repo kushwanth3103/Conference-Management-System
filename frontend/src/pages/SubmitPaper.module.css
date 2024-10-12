@@ -71,12 +71,44 @@
   background-color: #2b6cb0; /* Darker blue on hover */
 }
 
+.conferenceSelect {
+  width: 100%; /* Ensures the dropdown takes up the full width of its container */
+  max-width: 400px; /* Matches the max-width of the input fields */
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none; /* Remove default arrow styling */
+  cursor: pointer;
+}
+
+/* Style for the default option */
+.conferenceSelect option {
+  color: #333;
+}
+
+/* Focused state for the select */
+.conferenceSelect:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  outline: none;
+}
+
+
 /* Media Query for Small Screens (Phones) */
 @media (max-width: 768px) {
   .container {
     padding: 2rem 1rem; /* Reduce padding on small screens */
   }
 
+  .conferenceSelect {
+    width: 100%; /* Ensures it takes up full width on smaller screens */
+    font-size: 0.9rem;
+  }
+  
   .formWrapper {
     width: 100%; /* Full width on small screens */
     padding: 1.5rem; /* Reduce padding */

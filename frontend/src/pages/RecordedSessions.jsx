@@ -3,10 +3,17 @@ import sessionsImage from '../assets/sessions.png';
 import poster from '../assets/img.png';
 import classes from './RecordedSessions.module.css'; // Import CSS module
 import { RECORDINGS } from '../utils/data';
+import { useLocation } from 'react-router-dom';
+import {CONFERENCES} from '../utils/dataConferences'
 
 const RecordedSessions = () => {
 	const [recordedSessions, setRecordedSessions] = useState([]);
 	const [loading, setLoading] = useState(true);
+
+	const location = useLocation();
+	const searchParams = new URLSearchParams(location.search);
+	const cid = searchParams.get('cid');
+	const conference = CONFERENCES.find(conf => conf.conferenceId === parseInt(cid, 10));
 
 	useEffect(() => {
 		setRecordedSessions(RECORDINGS)
@@ -23,10 +30,10 @@ const RecordedSessions = () => {
 				<img className={classes.sessionImage} src={sessionsImage} alt="Recorded Session" />
 				<div className={classes.textContainer}>
 					<div className={classes.readyText}>
-						<div className={classes.titleText}>Ready to learn</div>
+						<div className={classes.titleText}>Welcome to {conference.conferenceName} Conference</div>
 					</div>
 					<div className={classes.bestText}>
-						<div className={classes.titleText}>From the best?</div>
+						<div className={classes.titleText}>Ready to learn From the best?</div>
 					</div>
 					<div className={classes.taglineText}>
 						~ Let's hop on and make the most of this virtual journey ~
@@ -36,7 +43,8 @@ const RecordedSessions = () => {
 							href="/video-conference"
 							className={classes.attendButton}
 						>
-							Attend Conference
+							<span>Join</span>
+							<span>Virtual Conference</span>
 						</a>
 					</div>
 				</div>

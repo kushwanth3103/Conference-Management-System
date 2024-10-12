@@ -178,6 +178,7 @@
 
 /* Media Queries for Responsiveness */
 
+/* Medium screens (tablets, 768px and below) */
 @media (max-width: 768px) {
     .paymentContainer {
         flex-direction: column;
@@ -192,8 +193,21 @@
     .gridContainer {
         grid-template-columns: 1fr;
     }
+
+    .modalBox {
+        width: 90%;
+    }
+
+    .header {
+        font-size: 1.75rem;
+    }
+
+    .amountBox {
+        padding: 1.5rem;
+    }
 }
 
+/* Small screens (mobile devices, 480px and below) */
 @media (max-width: 480px) {
     .main {
         padding: 1rem;
@@ -218,5 +232,21 @@
     .modalBox {
         width: 100%;
         padding: 1rem;
+    }
+
+    .inputField {
+        padding: 0.5rem;
+    }
+
+    .payButton {
+        padding: 0.5rem 1rem;
+    }
+
+    .paymentHeader {
+        font-size: 1rem;
+    }
+
+    .modalMessage {
+        padding-top: 0.5rem;
     }
 }

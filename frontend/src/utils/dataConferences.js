@@ -6,13 +6,6 @@ export const CONFERENCES=[
         "date":"10-09-2024",
         "email":"iot@techconference.org",
         "phone_number":"+1 432 567 8978",
-        "Submission_Guidelines":"Submit original papers not previously published#Follow the provided template for formatting (available on the submission portal)#Maximum paper length: 8 pages including references#All papers must be submitted in PDF format#Submissions will undergo a double-blind review process.",
-        "Important_Dates":{
-            "Conference_Start_Date":"10-09-2024",
-            "Submission_Opens":"10-09-2024",
-            "Submission_Deadline":"16-09-2024",
-            "Review_Deadline":"18-09-2024"
-        },
         "speakers":[
             {
               "sid": 1,
@@ -67,13 +60,6 @@ export const CONFERENCES=[
         "date": "10-10-2024",
         "email": "cloudconf@techconference.org",
         "phone_number": "+1 987 654 3211",
-        "Submission_Guidelines": "Submit original papers related to cloud computing#Use the provided template for formatting (available on the submission portal)#Maximum paper length: 8 pages including references#All papers must be in PDF format#Submissions will undergo a peer-review process.",
-        "Important_Dates": {
-          "Conference_Start_Date": "10-10-2024",
-          "Submission_Opens": "10-10-2024",
-          "Submission_Deadline": "10-15-2024",
-          "Review_Deadline": "10-17-2024"
-        },
         "speakers": [
           {
             "sid": 1,
@@ -95,13 +81,6 @@ export const CONFERENCES=[
         "date": "10-11-2024",
         "email": "mlconf@techconference.org",
         "phone_number": "+1 987 654 3212",
-        "Submission_Guidelines": "Submit original papers related to machine learning#Use the provided template for formatting (available on the submission portal)#Maximum paper length: 10 pages including references#All papers must be in PDF format#Submissions will undergo a peer-review process.",
-        "Important_Dates": {
-          "Conference_Start_Date": "10-11-2024",
-          "Submission_Opens": "10-11-2024",
-          "Submission_Deadline": "10-15-2024",
-          "Review_Deadline": "10-17-2024"
-        },
         "speakers": [
           {
             "sid": 1,
@@ -123,13 +102,6 @@ export const CONFERENCES=[
         "date": "10-12-2024",
         "email": "aiconf@techconference.org",
         "phone_number": "+1 987 654 3213",
-        "Submission_Guidelines": "Submit original papers related to artificial intelligence#Use the provided template for formatting (available on the submission portal)#Maximum paper length: 10 pages including references#All papers must be in PDF format#Submissions will undergo a peer-review process.",
-        "Important_Dates": {
-          "Conference_Start_Date": "10-12-2024",
-          "Submission_Opens": "10-12-2024",
-          "Submission_Deadline": "10-15-2024",
-          "Review_Deadline": "10-17-2024"
-        },
         "speakers": [
           {
             "sid": 1,

@@ -14,6 +14,7 @@
     "axios": "^1.7.7",
     "classnames": "^2.5.1",
     "jspdf": "^2.5.2",
+    "multiselect-react-dropdown": "^2.0.25",
     "pdfjs-dist": "^3.4.120",
     "peerjs": "^1.5.4",
     "react": "^18.3.1",
@@ -32,7 +33,6 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
-    "vite": "^5.4.1",
-    "vite-plugin-terminal": "^1.2.0"
+    "vite": "^5.4.1"
   }
 }

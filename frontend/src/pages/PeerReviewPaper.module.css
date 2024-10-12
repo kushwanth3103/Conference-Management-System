@@ -1,142 +1,185 @@
+/* Page Container */
 .pageContainer {
     min-height: 100vh;
-    background-color: #f9fafb; /* Equivalent to bg-gray-50 */
-    padding: 3rem; /* Equivalent to p-12 */
+    background-color: #f9fafb; /* bg-gray-50 */
+    padding: 3rem; /* p-12 */
 }
 
+/* Header */
 .header {
-    font-size: 2.25rem; /* Equivalent to text-4xl */
-    font-weight: bold; /* Equivalent to font-bold */
-    margin-bottom: 2rem; /* Equivalent to mb-8 */
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold; /* font-bold */
+    margin-bottom: 2rem; /* mb-8 */
+    text-align: center; /* Center header for better appearance */
 }
 
+/* Paper Summary Card */
 .paperCard {
     background-color: white;
-    border: 2px solid #60a5fa; /* Equivalent to border-blue-400 */
-    padding: 1.5rem; /* Equivalent to p-6 */
-    border-radius: 0.75rem; /* Equivalent to rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-lg */
-    margin-bottom: 3rem; /* Equivalent to mb-12 */
+    border: 2px solid #60a5fa; /* border-blue-400 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    margin-bottom: 3rem; /* mb-12 */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicate card is clickable */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Add spacing between sections inside the card */
 }
 
+/* Highlighted State */
+.paperCard.highlighted {
+    border-color: #4ade80; /* border-green-400 */
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.3); /* Stronger shadow when highlighted */
+}
+
+/* Paper Title */
 .paperTitle {
-    font-size: 1.25rem; /* Equivalent to text-xl */
-    font-weight: 600; /* Equivalent to font-semibold */
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
 }
 
+/* Paper Abstract */
 .paperAbstract {
-    margin-top: 1rem; /* Equivalent to mt-4 */
-    color: #4b5563; /* Equivalent to text-gray-700 */
+    margin-top: 1rem; /* mt-4 */
+    color: #4b5563; /* text-gray-700 */
 }
 
+/* Paper Keywords */
 .paperKeywords {
-    margin-top: 1rem; /* Equivalent to mt-4 */
-    color: #6b7280; /* Equivalent to text-gray-600 */
+    margin-top: 1rem; /* mt-4 */
+    color: #6b7280; /* text-gray-600 */
 }
 
+/* Feedback Button Container */
 .feedbackLinkContainer {
-    margin-top: 1rem; /* Equivalent to mt-4 */
+    margin-top: 1rem; /* mt-4 */
     display: flex;
     justify-content: flex-end;
 }
 
+/* Feedback Button */
 .feedbackButton {
-    background-color: #38a169; /* Equivalent to bg-green-500 */
+    background-color: #38a169; /* bg-green-500 */
     color: white;
-    padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
-    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.5rem; /* rounded-lg */
     transition: background-color 0.3s ease;
     cursor: pointer;
     text-decoration: none;
+    white-space: nowrap; /* Prevent button text from wrapping */
 }
 
 .feedbackButton:hover {
-    background-color: #2f855a; /* Equivalent to hover:bg-green-600 */
+    background-color: #2f855a; /* hover:bg-green-600 */
 }
 
+/* Feedback Section */
 .feedbackSection {
-    background-color: #ebf8ff; /* Equivalent to bg-blue-100 */
-    padding: 2rem; /* Equivalent to p-8 */
-    border-radius: 0.75rem; /* Equivalent to rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-lg */
+    background-color: #ebf8ff; /* bg-blue-100 */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
 }
 
+/* Feedback Header */
 .feedbackHeader {
-    font-size: 1.5rem; /* Equivalent to text-2xl */
-    font-weight: 600; /* Equivalent to font-semibold */
-    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 1.5rem; /* mb-6 */
 }
 
-.feedbackRating, .feedbackRelevance {
-    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
-}
-
-.peerCommentsTitle {
-    margin-bottom: 1rem; /* Equivalent to mb-4 */
-    font-weight: 600; /* Equivalent to font-bold */
-}
-
+/* Peer Comment List */
 .peerCommentsList {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Equivalent to space-y-4 */
+    gap: 1rem; /* space-y-4 */
 }
 
+/* Individual Peer Comment */
 .peerComment {
     background-color: white;
-    padding: 1rem; /* Equivalent to p-4 */
-    border-radius: 0.75rem; /* Equivalent to rounded-lg */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+    padding: 1rem; /* p-4 */
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-md */
 }
 
 .commentText {
-    color: #4b5563; /* Equivalent to text-gray-700 */
+    color: #4b5563; /* text-gray-700 */
 }
 
+/* No Reviews Text */
 .noReviewsText {
-    color: #6b7280; /* Equivalent to text-gray-600 */
+    color: #6b7280; /* text-gray-600 */
 }
 
-.noPaperContainer {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem; /* Equivalent to py-12 px-10 */
-    gap: 1.5rem; /* Equivalent to gap-6 */
-}
-
-.noPaperBox {
-    background-color: white;
-    padding: 2rem; /* Equivalent to p-8 */
-    border-radius: 0.75rem; /* Equivalent to rounded-lg */
-    border: 2px solid #d1d5db; /* Equivalent to ring-gray-300 */
-    width: 50%; /* Equivalent to w-1/2 */
-}
-
-.noPaperTitle {
-    font-size: 1.5rem; /* Equivalent to text-2xl */
-    font-weight: bold; /* Equivalent to font-bold */
-    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
-    text-align: center;
-}
-
-.noPaperText {
-    text-align: center;
-    color: #4b5563; /* Equivalent to text-gray-600 */
-}
-
-.noPaperIcon {
-    font-size: 2.5rem; /* Equivalent to text-4xl */
-    color: #f56565; /* Equivalent to text-red-500 */
-    display: block;
-    margin-top: 1rem; /* Equivalent to mt-4 */
-    text-align: center;
-}
-
+/* Loading Container */
 .loadingContainer {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pageContainer {
+        padding: 2rem; /* p-8 */
+    }
+
+    .header {
+        font-size: 2rem; /* text-3xl */
+    }
+
+    .paperCard {
+        padding: 1.25rem; /* p-5 */
+        margin-bottom: 2rem; /* mb-8 */
+    }
+
+    .feedbackButton {
+        padding: 0.5rem; /* p-2 */
+        font-size: 0.875rem; /* text-sm */
+    }
+
+    .feedbackSection {
+        padding: 1.5rem; /* p-6 */
+    }
+
+    .peerComment {
+        padding: 0.75rem; /* p-3 */
+    }
+}
+
+@media (max-width: 480px) {
+    .pageContainer {
+        padding: 1.5rem; /* p-6 */
+    }
+
+    .header {
+        font-size: 1.75rem; /* text-2xl */
+    }
+
+    .paperCard {
+        padding: 1rem; /* p-4 */
+    }
+
+    .feedbackButton {
+        padding: 0.5rem; /* p-2 */
+        font-size: 0.875rem; /* text-sm */
+        width: 100%; /* Full width button on small screens */
+        text-align: center;
+    }
+
+    .feedbackLinkContainer {
+        justify-content: center; /* Center the button on small screens */
+    }
+
+    .peerCommentsList {
+        gap: 0.75rem; /* Reduced gap for small screens */
+    }
+
+    .feedbackSection {
+        padding: 1rem; /* p-4 */
+    }
 }

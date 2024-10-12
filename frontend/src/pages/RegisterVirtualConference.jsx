@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './RegisterVirtualConference.module.css';
+import Multiselect from 'multiselect-react-dropdown';
+import { CONFERENCES } from '../utils/dataConferences';
 
 const RegisterVirtualConference = () => {
     const [selectedOption, setSelectedOption] = useState("Virtual Attendee");
@@ -8,11 +10,16 @@ const RegisterVirtualConference = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [occupation, setOccupation] = useState("");
-
+    const [conferences,setConferences]=useState([]);
+    console.log(conferences)
     useEffect(() => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const cid = urlParams.get('cid');
-        setCid(cid);
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const cid = urlParams.get('cid');
+        // setCid(cid);
+        const conferenceNames = CONFERENCES.map((conference) => ({
+            name: conference.conferenceName // Create an object with a "name" property
+        }));
+        setConferences(conferenceNames);
     }, []);
 
     useEffect(() => {
@@ -44,17 +51,19 @@ const RegisterVirtualConference = () => {
         return cid !== undefined;
     }
 
-    if (!validateConferenceId(cid)) {
-        return (
-            <div className={styles.errorContainer}>
-                <div className={styles.errorMessage}>
-                    <h1 className={styles.errorTitle}>Invalid Conference ID</h1>
-                    <p>Please provide a valid conference ID to register for the conference.</p>
-                    <i className={`fas fa-exclamation-triangle ${styles.errorIcon}`}></i>
-                </div>
-            </div>
-        );
-    }
+    const onSelect=()=>{}
+    const onRemove=()=>{}
+    // if (!validateConferenceId(cid)) {
+    //     return (
+    //         <div className={styles.errorContainer}>
+    //             <div className={styles.errorMessage}>
+    //                 <h1 className={styles.errorTitle}>Invalid Conference ID</h1>
+    //                 <p>Please provide a valid conference ID to register for the conference.</p>
+    //                 <i className={`fas fa-exclamation-triangle ${styles.errorIcon}`}></i>
+    //             </div>
+    //         </div>
+    //     );
+    // }
 
     return (
         <div className={styles.container}>
@@ -123,6 +132,16 @@ const RegisterVirtualConference = () => {
                             />
                             <span>Virtual Presentation and publication with Mentorship - $200</span>
                         </div>
+                    </div>
+                    <div className={styles.formGroup}>
+                        <label className={styles.label}>Select Conferences for {selectedOption}:</label>
+                        <Multiselect
+                        options={conferences} // Options to display in the dropdown
+                        selectedValues={[]} // Preselected value to persist in dropdown
+                        onSelect={onSelect} // Function will trigger on select event
+                        onRemove={onRemove} // Function will trigger on remove event
+                        displayValue="name" // Property name to display in the dropdown options
+                        />
                     </div>
                     <button type="submit" className={styles.submitButton}>
                         Continue to Payment

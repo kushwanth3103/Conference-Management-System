@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import classes from './SubmitPaper.module.css'; // Import the CSS module
+import { CONFERENCES } from '../utils/dataConferences';
 
 const SubmitPaper = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const SubmitPaper = () => {
     abstract: '',
     keywords: '',
     paperFile: null,
+    conference:''
   });
 
   useEffect(() => {
@@ -27,6 +29,15 @@ const SubmitPaper = () => {
     setFormData({
       ...formData,
       [name]: value,
+    });
+  };
+
+  const handleConferenceChange = (event) => {
+    const conferenceId = parseInt(event.target.value, 10);
+    const conference = CONFERENCES.find((conf) => conf.conferenceId === conferenceId);
+    setFormData({
+      ...formData,
+      conference: conference,
     });
   };
 
@@ -90,6 +101,21 @@ const SubmitPaper = () => {
               onChange={handleInputChange}
               className={classes.input}
             />
+          </div>
+          <div className={classes.formGroup}>
+            <label className={classes.label}>Select a Conference:</label>
+            <select
+              className={classes.conferenceSelect}
+              name="conference-select"
+              onChange={handleConferenceChange}
+            >
+                <option value="">--Choose a Conference--</option>
+                {CONFERENCES.map((conference) => (
+                  <option key={conference.conferenceId} value={conference.conferenceId}>
+                    {conference.conferenceName}
+                  </option>
+                ))}
+            </select>
           </div>
           <div className={classes.formGroup}>
             <label className={classes.label}>Paper Title:</label>

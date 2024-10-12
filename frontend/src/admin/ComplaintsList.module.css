@@ -1,0 +1,110 @@
+/* src/styles/ComplaintsList.module.css */
+.complaintsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .complaintItem {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .complaintItem:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header containing user name and inquiry type */
+  .complaintHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  /* User name styling */
+  .userName {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Inquiry type with badge styling */
+  .inquiryType {
+    font-size: 0.9rem;
+    color: #4b5563;
+    background-color: #e0f2fe;
+    padding: 4px 8px;
+    border-radius: 12px;
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  /* Contact information styling */
+  .contactInfo {
+    margin-bottom: 10px;
+  }
+  
+  .contactInfo p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Complaint message styling */
+  .message {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .complaintsContainer {
+      padding: 15px; /* Adjust padding for smaller screens */
+      gap: 15px;
+    }
+  
+    .complaintItem {
+      padding: 12px;
+    }
+  
+    .userName {
+      font-size: 1.1rem;
+    }
+  
+    .inquiryType {
+      font-size: 0.85rem;
+      padding: 3px 6px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .complaintHeader {
+      flex-direction: column; /* Stack header items vertically */
+      align-items: flex-start;
+    }
+  
+    .userName {
+      font-size: 1rem;
+    }
+  
+    .inquiryType {
+      margin-top: 5px;
+    }
+  
+    .message {
+      font-size: 0.9rem;
+    }
+  }
+  

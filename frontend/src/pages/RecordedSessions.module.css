@@ -1,108 +1,147 @@
+/* Main app container */
 .pageContainer {
-	min-height: 100vh;
+    min-height: 100vh;
 }
 
+/* Image and text container */
 .imageAndTextContainer {
-	display: flex;
+    display: flex;
 }
 
+/* Session image styling */
 .sessionImage {
-	width: 66.67%; /* Equivalent to w-2/3 */
+    width: 66.67%; /* Equivalent to w-2/3 */
 }
 
+/* Text container styling */
 .textContainer {
-	width: 33.33%; /* Equivalent to w-1/3 */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 1rem;
+    width: 33.33%; /* Equivalent to w-1/3 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
 }
 
+/* Text styling */
 .readyText, .bestText {
-	text-align: center;
+    text-align: center;
+    margin-bottom: 17px;
 }
 
 .titleText {
-	font-size: 1.25rem; /* Equivalent to text-xl */
+    font-size: 1.25rem; /* Equivalent to text-xl */
 }
 
 .taglineText {
-	font-size: 0.875rem; /* Equivalent to text-sm */
-	font-weight: 300; /* Equivalent to font-thin */
-	text-align: center;
-	margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    font-weight: 300; /* Equivalent to font-thin */
+    text-align: center;
+    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
 }
 
+/* Button container */
 .buttonContainer {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
+/* Updated Attend Button */
 .attendButton {
-	background-color: #6b46c1; /* Equivalent to bg-purple-600 */
-	color: white;
-	padding: 0.5rem 1rem; /* Equivalent to py-2 px-4 */
-	border-radius: 9999px; /* Equivalent to rounded-full */
-	width: 70%; /* Equivalent to w-[70%] */
-	text-align: center;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-	text-decoration: none;
+	background-color: #6b46c1; /* Purple background */
+    color: white;
+    padding: 0.75rem 1.5rem; /* Increased padding for a better look */
+    border-radius: 9999px; /* Full rounded */
+    width: auto; /* Adjusted width to auto */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem; /* Default font size */
+    white-space: normal; /* Allow text wrapping */
+    display: inline-block;
 }
 
+/* Hover effect */
 .attendButton:hover {
-	background-color: #553c9a; /* Equivalent to hover:bg-purple-700 */
+    background-color: #553c9a; /* Darker purple on hover */
 }
 
+/* Recorded sessions section */
 .recordedSessionsSection {
-	padding: 2rem; /* Equivalent to p-8 */
+    padding: 2rem; /* Equivalent to p-8 */
 }
 
+/* Section title */
 .sectionTitle {
-	font-size: 1.5rem; /* Equivalent to text-2xl */
-	text-align: center;
-	font-weight: bold;
-	margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
 }
 
+/* Grid container for sessions */
 .gridContainer {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Equivalent to grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 */
-	gap: 2rem; /* Equivalent to gap-8 */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Equivalent to grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 */
+    gap: 2rem; /* Equivalent to gap-8 */
 }
 
+/* Session card styling */
 .sessionCard {
-	position: relative;
-	background-color: white;
-	border-radius: 0.75rem; /* Equivalent to rounded-lg */
-	overflow: hidden;
+    position: relative;
+    background-color: white;
+    border-radius: 0.75rem; /* Equivalent to rounded-lg */
+    overflow: hidden;
 }
 
+/* Session title styling */
 .sessionTitle {
-	position: absolute;
-	top: 0.75rem; /* Equivalent to top-3 */
-	left: 1rem;
-	right: 1rem;
-	color: white;
-	text-align: center;
-	font-size: 1.125rem; /* Equivalent to text-lg */
-	font-weight: 600; /* Equivalent to font-semibold */
+    position: absolute;
+    top: 0.75rem; /* Equivalent to top-3 */
+    left: 1rem;
+    right: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-weight: 600; /* Equivalent to font-semibold */
 }
 
+/* Video styling */
 .video {
-	width: 100%;
-	height: 13rem; /* Equivalent to h-52 */
-	object-fit: cover;
-	border-radius: 0.75rem; /* Equivalent to rounded-lg */
+    width: 100%;
+    height: 13rem; /* Equivalent to h-52 */
+    object-fit: cover;
+    border-radius: 0.75rem; /* Equivalent to rounded-lg */
 }
 
+/* Recorded date styling */
 .recordedDate {
-	position: absolute;
-	bottom: 1rem;
-	left: 1rem;
-	right: 1rem;
-	color: #e5e7eb; /* Equivalent to text-gray-200 */
-	font-size: 0.75rem; /* Equivalent to text-xs */
-	font-weight: 300; /* Equivalent to font-thin */
-	text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    color: #e5e7eb; /* Equivalent to text-gray-200 */
+    font-size: 0.75rem; /* Equivalent to text-xs */
+    font-weight: 300; /* Equivalent to font-thin */
+    text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    .attendButton {
+        padding: 0.5rem 1rem; /* Smaller padding for mobile */
+        font-size: 0.875rem; /* Slightly smaller font size */
+        width: 80%; /* Set a specific width for better layout */
+        line-height: 1.2; /* Adjust line height for better spacing */
+    }
+
+	.attendButton span {
+        display: block; /* Make each word block-level to stack them */
+    }
+	
+    .buttonContainer {
+        justify-content: center;
+        align-items: center;
+    }
 }

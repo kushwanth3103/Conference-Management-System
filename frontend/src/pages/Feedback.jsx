@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import styles from './Feedback.module.css'; // Import the CSS module
-
+import { REVIEWS } from '../utils/data';
+import pdf from '../utils/Cloud_Computing_Research_and_Development_Trend.pdf'
 const Feedback = () => {
     const [overallEvaluation, setOverallEvaluation] = useState('');
     const [relevance, setRelevance] = useState('');
@@ -15,54 +16,17 @@ const Feedback = () => {
     useEffect(() => {
         const paperId = new URLSearchParams(window.location.search).get('pid');
         setPid(paperId);
-
+        
         if (paperId) {
-            fetch(`http://localhost:3000/api/papers/${paperId}`)
-                .then((response) => response.json())
-                .then((data) => {
-                    setPaper(data);
-                    if (data.paper_location) {
-                        setPdfUrl(`http://localhost:3000/${data.paper_location}`);
-                    }
-                })
-                .catch((error) => console.error('Error fetching paper details:', error));
+            setPaper(REVIEWS)
+            console.log(paper)
+            setPdfUrl(pdf)
         }
 
     }, []);
 
     const handlePostReview = async () => {
-        if (!overallEvaluation || !relevance || !comments || !pid) {
-            alert('All fields are required');
-            return;
-        }
-
-        const reviewData = {
-            overallEvaluation,
-            relevance,
-            comments,
-            uid: user.id,
-        };
-
-        try {
-            const response = await fetch(`http://localhost:3000/api/papers/${pid}/reviews`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(reviewData),
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                alert('Review posted successfully!');
-            } else {
-                alert(`Failed to post review: ${result.message}`);
-            }
-        } catch (error) {
-            console.error('Error posting review:', error);
-            alert('An error occurred while posting the review.');
-        }
+        
     };
 
     return (

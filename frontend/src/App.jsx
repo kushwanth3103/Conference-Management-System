@@ -20,6 +20,7 @@ import PeerReviewPaper from './pages/PeerReviewPaper';
 import Feedback from "./pages/Feedback.jsx";
 import HomePage from "./pages/HomePage";
 import styles from './App.module.css'; // Importing the updated CSS module
+import AdminPage from './admin/AdminPage.jsx';
 
 const App = () => {
     return (
@@ -54,6 +55,11 @@ const App = () => {
                         <Route path="/register/virtual-conference" element={
                             <ProtectedRoute className={styles.protectedRoute}>
                                 <RegisterVirtualConference/>
+                            </ProtectedRoute>
+                        }/>
+                        <Route path="/admin" element={
+                            <ProtectedRoute className={styles.protectedRoute}>
+                                <AdminPage/>
                             </ProtectedRoute>
                         }/>
                         <Route path="/select/virtual-conference" element={

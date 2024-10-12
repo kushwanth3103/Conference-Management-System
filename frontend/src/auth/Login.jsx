@@ -25,17 +25,28 @@ const Login = () => {
         setSuccess('');
 
         try {
-            const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
-            setLoading(false);
-            setSuccess(response.data.message);
-            localStorage.setItem('user', JSON.stringify(response.data.user));
-            setEmail('');
-            setPassword('');
+            // const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
+            // setLoading(false);
+            // setSuccess(response.data.message);
+            if(email=='guest@gmail.com' && password=="Guest@123"){
+                localStorage.setItem('user', 'Guest');
+                setEmail('');
+                setPassword('');
+                navigate('/');
+            }
+            else if(email=='admin@gmail.com' && password=="Admin@123"){
+                localStorage.setItem('user', 'Admin');
+                setEmail('');
+                setPassword('');
+                navigate('/admin');
+            }
+            else{
+                throw new Error("");
+            }
 
-            navigate('/announcements');
         } catch (err) {
             setLoading(false);
-            setError(err.response?.data?.error || 'An error occurred. Please try again.');
+            setError(err.response?.data?.error || 'Please enter email : guest@gmail.com Password : Guest@123');
         }
     };
 
