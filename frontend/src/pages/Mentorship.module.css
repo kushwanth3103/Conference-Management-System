@@ -1,0 +1,205 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Main container with flexible height */
+  .container {
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height)); /* Height between navbar and footer */
+    padding: 3rem 1.5rem; /* py-12 */
+    background-color: #f9fafb; /* bg-gray-50 */
+  }
+  
+  /* Header styling */
+  .header {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold; /* font-bold */
+    text-align: center;
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  /* Subheader styling */
+  .subHeader {
+    text-align: center;
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 2rem; /* mb-8 */
+  }
+  
+  /* Mentor container */
+  .mentorContainer {
+    max-width: 90rem; /* max-w-7xl */
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem; /* p-8 */
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    margin-bottom: 3rem; /* mb-12 */
+  }
+  
+  /* Mentor profile */
+  .mentorProfile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .profileTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profileDescription {
+    color: #4b5563;
+    max-width: 60%;
+  }
+  
+  .expertiseText {
+    text-align: right;
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 2rem;
+    max-width: 35%;
+  }
+  
+  /* Form container */
+  .formContainer {
+    max-width: 75rem;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+  }
+  
+  /* Form group */
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .formLabel {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    color: #4b5563; /* text-gray-700 */
+  }
+  
+  /* Form input and select */
+  .formInput, .formSelect {
+    margin-top: 0.25rem;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-sm */
+  }
+  
+  /* Time slots container */
+  .timeSlotsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .timeSlot {
+    padding: 1rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    text-align: center;
+    border: 1px solid #d1d5db; /* Light border */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.timeSlot:hover {
+    background-color: #e5e7eb; /* Slightly darker background on hover */
+}
+  
+.selectedTimeSlot {
+    background-color: #3b82f6; /* Blue background for selected */
+    color: white;
+    cursor: pointer; /* Ensure pointer cursor */
+}
+
+.unselectedTimeSlot {
+    background-color: #f3f4f6;
+}
+  
+  /* Submit button */
+  .submitButton {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+  }
+  
+  .textCenter {
+    text-align: center;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .mentorProfile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profileDescription, .expertiseText {
+      max-width: 100%;
+      text-align: left;
+      margin-left: 0;
+    }
+  
+    .timeSlotsContainer {
+      grid-template-columns: 1fr; /* Single column for time slots */
+    }
+  
+    .container, .formContainer {
+      padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+  
+    .formContainer {
+      width: 100%; /* Full width for smaller screens */
+    }
+  
+    .mentorContainer {
+      padding: 1.5rem; /* Adjust padding for mentor profiles */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 1.75rem; /* Smaller font size for very small screens */
+    }
+  
+    .profileTitle {
+      font-size: 1.5rem; /* Smaller profile title for mobile */
+    }
+  
+    .submitButton {
+      font-size: 0.875rem; /* Smaller button text */
+    }
+  }
+  

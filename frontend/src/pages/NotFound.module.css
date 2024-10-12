@@ -1,0 +1,22 @@
+.notFoundContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align items in a column */
+    height: 100vh; /* Full screen height */
+    text-align: center;
+    background-color: #f9fafb; /* Optional background color */
+}
+
+.icon {
+    margin-bottom: 1rem; /* Equivalent to mb-4 in Tailwind */
+    font-size: 2.5rem; /* Equivalent to text-4xl */
+    color: #ef4444; /* Equivalent to text-red-500 */
+}
+
+.title {
+    font-size: 2.5rem; /* Equivalent to text-4xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+    color: #111827; /* Dark gray color for the text */
+    margin: 0;
+}

@@ -1,0 +1,189 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 3rem;
+}
+
+/* Header Section */
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.mySubmissionButton {
+    background-color: #6b46c1;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.mySubmissionButton:hover {
+    background-color: #553c9a;
+}
+
+/* Papers List */
+.papersList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.paperItem {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.paperTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.paperAbstract {
+    margin-top: 0.5rem;
+    color: #4b5563;
+}
+
+.reviewButton {
+    background-color: #6b46c1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.reviewButton:hover {
+    background-color: #553c9a;
+}
+
+/* No Papers Container */
+.noPapersContainer {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    gap: 1.5rem;
+}
+
+.noPapersBox {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 2px solid #d1d5db;
+    width: 50%;
+}
+
+.noPapersTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.noPapersText {
+    text-align: center;
+    color: #4b5563;
+}
+
+.noPapersIcon {
+    font-size: 2.5rem;
+    color: #f56565;
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Loading Container */
+.loadingContainer {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pageContainer {
+        padding: 2rem;
+    }
+
+    .headerSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .papersList {
+        gap: 1rem;
+    }
+
+    .paperItem {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .noPapersBox {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageContainer {
+        padding: 1.5rem;
+    }
+
+    .headerSection {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .mySubmissionButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .paperItem {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .paperTitle {
+        font-size: 1.125rem;
+    }
+
+    .reviewButton {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .noPapersBox {
+        width: 100%;
+    }
+}

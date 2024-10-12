@@ -1,0 +1,172 @@
+/* Reset browser default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure the body doesn't overflow horizontally */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Main container */
+  .container {
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0; /* py-12 */
+  }
+  
+  /* Image styling */
+  .image {
+    width: 50%; /* w-1/2 */
+  }
+  
+  /* Form container */
+  .formContainer {
+    background-color: white;
+    padding: 2rem; /* p-8 */
+    border-radius: 0.75rem; /* rounded-lg */
+    width: 50%; /* w-1/2 */
+  }
+  
+  /* Heading styling */
+  .heading {
+    font-size: 2rem; /* text-2xl */
+    font-weight: bold;
+    margin-bottom: 1.5rem; /* mb-6 */
+    text-align: center;
+  }
+  
+  /* Error message styling */
+  .errorMessage {
+    color: #ef4444; /* text-red-500 */
+    margin-bottom: 1rem; /* mb-4 */
+    text-align: center;
+  }
+  
+  /* Success message styling */
+  .successMessage {
+    color: #10b981; /* text-green-500 */
+    margin-bottom: 1rem; /* mb-4 */
+    text-align: center;
+  }
+  
+  /* Form group styling */
+  .formGroup {
+    margin-bottom: 1.5rem; /* mb-6 */
+  }
+  
+  /* Label styling */
+  .label {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #374151; /* text-gray-700 */
+  }
+  
+  /* Input field styling */
+  .inputField {
+    margin-top: 0.25rem; /* mt-1 */
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-sm */
+  }
+  
+  /* Focus effect for input fields */
+  .inputField:focus {
+    outline: none; /* Removes default focus outline */
+    border: 2px solid #a855f7; /* Simulates border color change */
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.5); /* Simulates the ring effect */
+  }
+  
+  /* Button styling */
+  .button {
+    width: 100%; /* w-full */
+    background-color: #7c3aed; /* bg-purple-600 */
+    color: white;
+    padding: 0.75rem; /* py-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+    font-weight: 600; /* font-semibold */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for button */
+  .button:hover {
+    background-color: #6b21a8; /* hover:bg-purple-700 */
+  }
+  
+  /* Disabled button state */
+  .buttonDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Link container styling */
+  .linkContainer {
+    margin-top: 1rem; /* mt-4 */
+    text-align: center;
+  }
+  
+  /* Link styling */
+  .link {
+    color: #7c3aed; /* text-purple-500 */
+    text-decoration: none;
+  }
+  
+  /* Hover effect for link */
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 2rem; /* Adjust padding for smaller screens */
+    }
+  
+    .image {
+      width: 100%; /* Make image take full width */
+      margin-bottom: 2rem; /* Add space below the image */
+    }
+  
+    .formContainer {
+      width: 100%; /* Make form take full width */
+    }
+  
+    .heading {
+      font-size: 1.75rem; /* Slightly smaller heading */
+    }
+  
+    .inputField, .button {
+      font-size: 0.875rem; /* Slightly reduce text size for inputs and button */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 1rem; /* Less padding for very small screens */
+    }
+  
+    .heading {
+      font-size: 1.5rem; /* Further reduce heading size */
+    }
+  
+    .inputField, .button {
+      font-size: 0.75rem; /* Further reduce text size for inputs and button */
+    }
+  
+    .image {
+      display: none; /* Hide image on very small screens for better UX */
+    }
+  }
+  

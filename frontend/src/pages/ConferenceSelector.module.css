@@ -1,0 +1,236 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  font-family: sans-serif;
+}
+
+.darkTheme {
+  color: rgb(105, 103, 103);
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+  }
+}
+
+.scheduleContainer, .detailsContainer {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .scheduleContainer, .detailsContainer {
+    width: 50%;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.monthSelector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.arrowButton {
+  padding: 8px;
+}
+
+.eventCount {
+  margin-left: 8px;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.currentMonth {
+  font-weight: 500;
+}
+
+.dayGrid, .dateGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+  .dayGrid, .dateGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.day {
+  text-align: center;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.dateHover:hover {
+  background-color: #f3f4f6;
+}
+
+.disabledDate {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.selectableDate {
+  background-color: #d1fae5;
+  color: #047857;
+  font-weight: 600;
+}
+
+.selectedDate {
+  border: 2px solid #10b981;
+}
+
+.exportButtonContainer {
+  text-align: center;
+}
+
+.exportButton {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.exportButton:hover {
+  background-color: #2563eb;
+}
+
+.scheduleDetailsTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.conferenceDetails {
+  margin-bottom: 16px;
+}
+
+.conferenceTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.conferenceDescription {
+  margin-top: 10px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.contactInfo {
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.contactInfo p {
+  margin-bottom: 4px;
+}
+
+.speakerSection {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.speakerTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.speakerDetails {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.speakerName {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+}
+
+.speakerBio, .speakerDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.noSpeakers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.registerButtonContainer {
+  text-align: center;
+}
+
+.registerButton {
+  background-color: #3b82f6;
+  color: white;
+  margin-top: 16px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registerButton:hover {
+  background-color: #2563eb;
+}
+
+.noDateSelected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #5b5f65;
+  text-align: center;
+}
+

@@ -1,0 +1,97 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 3rem 1rem; /* Padding for larger screens */
+}
+
+/* Adjust formWrapper width for smaller screens */
+.formWrapper {
+  background-color: white;
+  padding: 2rem; /* Equivalent to p-8 */
+  border-radius: 0.75rem; /* Rounded corners */
+  width: 100%; /* Full width on small screens */
+  max-width: 500px; /* Maximum width for larger screens */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.title {
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  font-weight: bold; /* Bold font */
+  margin-bottom: 1.5rem; /* Margin at the bottom */
+  text-align: center; /* Centered text */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between form elements */
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.875rem; /* Small text size */
+  font-weight: 500; /* Medium font weight */
+  margin-bottom: 0.5rem; /* Margin at the bottom */
+  color: #4a5568; /* Gray text */
+}
+
+.input,
+.textarea {
+  padding: 0.5rem 1rem; /* Padding */
+  border: 1px solid #cbd5e0; /* Light border */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: border-color 0.3s ease; /* Smooth transition for border on focus */
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #4299e1; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.submitButton {
+  background-color: #3182ce; /* Blue button background */
+  color: white;
+  padding: 0.75rem 1.5rem; /* Padding inside button */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: 600; /* Semi-bold font */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition for background on hover */
+}
+
+.submitButton:hover {
+  background-color: #2b6cb0; /* Darker blue on hover */
+}
+
+/* Media Query for Small Screens (Phones) */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem; /* Reduce padding on small screens */
+  }
+
+  .formWrapper {
+    width: 100%; /* Full width on small screens */
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  .title {
+    font-size: 1.25rem; /* Slightly smaller title font size */
+  }
+
+  .input,
+  .textarea {
+    padding: 0.5rem; /* Slightly smaller padding */
+  }
+
+  .submitButton {
+    padding: 0.5rem 1rem; /* Slightly smaller button padding */
+  }
+}

@@ -1,0 +1,91 @@
+/* Main app container, ensuring minimum height covers at least 100% of the viewport */
+.appContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9fafb; /* Light background */
+  }
+  
+  /* Main content area with padding */
+  .mainContent {
+    flex-grow: 1;
+    /*padding: 2rem 1.5rem;*/
+    background-color: white; /* Optional, but ensures consistency */
+  }
+  
+  /* Navbar styling */
+  .navBar {
+    background-color: #1d4ed8; /* Blue background for the Navbar */
+    color: white;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .navBar a {
+    color: white;
+    margin-right: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .navBar a:hover {
+    color: #fbbf24; /* Yellow color on hover */
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: #1e293b; /* Darker background for footer */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .footer a {
+    color: #a855f7; /* Purple color for links in footer */
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #d946ef; /* Darker purple on hover */
+  }
+  
+  /* For the protected routes transition */
+  .protectedRoute {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navBar {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .navBar a {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  
+    .footer {
+      font-size: 0.8rem;
+    }
+  }

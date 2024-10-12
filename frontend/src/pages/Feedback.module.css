@@ -1,0 +1,97 @@
+.container {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 48px;
+    display: flex;
+    gap: 32px;
+  }
+  
+  .pdfSection {
+    width: 60%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  .pdfViewer {
+    height: 85vh;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .noPdf {
+    height: 24rem;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+  }
+  
+  .reviewForm {
+    width: 40%;
+    background-color: #dbeafe;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section {
+    margin-bottom: 24px;
+  }
+  
+  .radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .radioItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .radioInput {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  
+  .textarea {
+    width: 100%;
+    height: 8rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+  }
+  
+  .submitButton {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton:hover {
+    background-color: #1d4ed8;
+  }
+  

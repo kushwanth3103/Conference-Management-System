@@ -1,0 +1,145 @@
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 24px 16px; /* Reduced padding for small screens */
+}
+
+.heading {
+  font-size: 2rem; /* Smaller font size for small screens */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px; /* Reduced margin for small screens */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px; /* Reduced gap for small screens */
+  max-width: 100%; /* Max width takes full screen on smaller screens */
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px; /* Larger gap for bigger screens */
+    max-width: 1280px;
+  }
+}
+
+.card {
+  background-color: white;
+  padding: 24px; /* Reduced padding for small screens */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.5rem; /* Smaller font size for small screens */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px; /* Reduced margin */
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Reduced gap for small screens */
+}
+
+.articleTitle {
+  font-size: 1rem; /* Slightly smaller font for small screens */
+  font-weight: bold;
+}
+
+.articleText {
+  color: #4b5563;
+}
+
+.button {
+  margin-top: 16px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2563eb;
+}
+
+.jobBoard {
+  background-color: white;
+  padding: 24px; /* Reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+  max-width: 100%; /* Full width on small screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jobBoardTitle {
+  font-size: 1.5rem; /* Smaller font size */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.jobTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  background-color: #e5e7eb;
+}
+
+.tableCell {
+  border: 1px solid #d1d5db;
+  padding: 12px;
+}
+
+.tableCellCentered {
+  text-align: center;
+}
+
+.noJobs {
+  min-height: 20vh; /* Reduced height for small screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noJobsCard {
+  background-color: white;
+  padding: 16px; /* Reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.noJobsTitle {
+  font-size: 1.25rem; /* Reduced font size */
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.noJobsText {
+  color: #6b7280;
+}
+
+.noJobsIcon {
+  font-size: 1.75rem; /* Slightly smaller icon */
+  color: #ef4444;
+}
+
+.loadingScreen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+}
