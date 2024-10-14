@@ -1,8 +1,14 @@
-/* Main Container */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .announcementContainer {
-    min-height: 100vh; /* Use min-height instead of height */
+    min-height: 100vh; 
     display: flex;
-    flex-direction: column; /* Stack vertically for smaller screens */
+    flex-direction: column; 
     padding: 2.5rem;
     background-color: #f0f8ff;
     background-size: cover;
@@ -11,25 +17,25 @@
     box-sizing: border-box;
 }
 
-/* Layout Wrapper for Left and Right Sections */
+
 .layoutWrapper {
     display: flex;
     flex: 1;
     gap: 2rem;
     margin-top: 1rem;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; 
 }
 
-/* Left Section (Content Wrapper) */
+
 .contentWrapper {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%; /* Ensure full width on smaller screens */
+    width: 100%; 
 }
 
-/* Conference Information */
+
 .conferenceInfo {
     text-align: center;
     color: white;
@@ -37,13 +43,13 @@
     border-radius: 0.75rem;
 }
 
-/* Grid Container for Options */
+
 .gridContainer {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     margin-top: 3rem;
-    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .optionCard {
@@ -52,8 +58,8 @@
     border-radius: 0.75rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 30%; /* Ensure equal width for larger screens */
-    flex-grow: 1; /* Make them take up space evenly */
+    width: 30%; 
+    flex-grow: 1; 
 }
 
 .optionLink {
@@ -64,18 +70,18 @@
     text-decoration: none;
 }
 
-/* Right Section (News Section) */
+
 .newsSection {
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent */
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 1.0rem;
     border-radius: 0.75rem;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 600px; /* Full height */
-    min-height: 100px; /* Ensure it doesn’t shrink too much */
+    max-height: 600px; 
+    min-height: 100px; 
     
 }
 
@@ -86,7 +92,7 @@
     margin-bottom: 1rem;
 }
 
-/* Announcement Item with White Background */
+
 .announcementItem {
     background-color: white;
     padding: 1rem;
@@ -102,10 +108,10 @@
     margin-bottom: 1rem;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .layoutWrapper {
-        flex-direction: column; /* Stack vertically */
+        flex-direction: column; 
     }
 
     .gridContainer {
@@ -115,8 +121,8 @@
 
     .newsSection {
         margin-top: 2rem;
-        width: 100%; /* Full width */
-        min-height: 200px; /* Ensure the height is sufficient */
+        width: 100%; 
+        min-height: 200px; 
     }
 }
 
@@ -130,10 +136,10 @@
     }
 
     .optionCard {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%; 
     }
 
     .newsSection {
-        max-height: 300px; /* Prevent shrinking */
+        max-height: 300px; 
     }
 }

@@ -1,3 +1,10 @@
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .container {
   min-height: 100vh;
   background-color: #f9fafb;
@@ -88,17 +95,17 @@
   margin-bottom: 16px;
 }
 
-/* New styles for responsive table with horizontal scroll within div */
+
 .jobTableContainer {
   width: 100%;
-  max-width: 100%; /* Ensures it doesn't exceed parent container width */
-  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 100%; 
+  overflow-x: auto; 
 }
 
 .jobTable {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px; /* Optional: Set a minimum width for the table */
+  min-width: 600px; 
 }
 
 .tableHeader {
@@ -152,21 +159,18 @@
   background-color: #f9fafb;
 }
 
-/* Media Queries for Responsive Table */
-
-/* Horizontal scrolling for tables on small screens (768px and below) */
 @media (max-width: 768px) {
   .jobTableContainer {
-    overflow-x: auto; /* Enable horizontal scrolling within the div */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
   }
 
   .jobTable {
-    min-width: 600px; /* Set a minimum width for the table */
+    min-width: 600px; 
   }
 }
 
-/* Further adjustments for very small screens (480px and below) */
+
 @media (max-width: 480px) {
   .heading {
     font-size: 1.5rem;
@@ -177,7 +181,7 @@
   }
 
   .jobTable {
-    min-width: 500px; /* Further adjust minimum width for very small screens */
+    min-width: 500px; 
   }
 
   .card {

@@ -1,120 +1,120 @@
-/* Page Container */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .pageContainer {
     min-height: 100vh;
-    background-color: #f9fafb; /* bg-gray-50 */
-    padding: 3rem; /* p-12 */
+    background-color: #f9fafb; 
+    padding: 3rem; 
 }
 
-/* Header */
+
 .header {
-    font-size: 2.25rem; /* text-4xl */
-    font-weight: bold; /* font-bold */
-    margin-bottom: 2rem; /* mb-8 */
-    text-align: center; /* Center header for better appearance */
+    font-size: 2.25rem; 
+    font-weight: bold; 
+    margin-bottom: 2rem; 
+    text-align: center; 
 }
 
-/* Paper Summary Card */
+
 .paperCard {
     background-color: white;
-    border: 2px solid #60a5fa; /* border-blue-400 */
-    padding: 1.5rem; /* p-6 */
-    border-radius: 0.75rem; /* rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
-    margin-bottom: 3rem; /* mb-12 */
+    border: 2px solid #60a5fa; 
+    padding: 1.5rem; 
+    border-radius: 0.75rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 3rem; 
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* Indicate card is clickable */
+    cursor: pointer; 
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Add spacing between sections inside the card */
+    gap: 1rem; 
 }
 
-/* Highlighted State */
+
 .paperCard.highlighted {
-    border-color: #4ade80; /* border-green-400 */
-    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.3); /* Stronger shadow when highlighted */
+    border-color: #4ade80;
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.3);
 }
 
-/* Paper Title */
 .paperTitle {
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 600; /* font-semibold */
+    font-size: 1.25rem; 
+    font-weight: 600;
 }
 
-/* Paper Abstract */
+
 .paperAbstract {
-    margin-top: 1rem; /* mt-4 */
-    color: #4b5563; /* text-gray-700 */
+    margin-top: 1rem; 
+    color: #4b5563; 
 }
 
-/* Paper Keywords */
+
 .paperKeywords {
-    margin-top: 1rem; /* mt-4 */
-    color: #6b7280; /* text-gray-600 */
+    margin-top: 1rem; 
+    color: #6b7280;
 }
 
-/* Feedback Button Container */
 .feedbackLinkContainer {
-    margin-top: 1rem; /* mt-4 */
+    margin-top: 1rem;
     display: flex;
     justify-content: flex-end;
 }
 
-/* Feedback Button */
+
 .feedbackButton {
-    background-color: #38a169; /* bg-green-500 */
+    background-color: #38a169; 
     color: white;
-    padding: 0.5rem 1rem; /* px-4 py-2 */
-    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.5rem 1rem; 
+    border-radius: 0.5rem; 
     transition: background-color 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-    white-space: nowrap; /* Prevent button text from wrapping */
+    white-space: nowrap; 
 }
 
 .feedbackButton:hover {
-    background-color: #2f855a; /* hover:bg-green-600 */
+    background-color: #2f855a; 
 }
 
-/* Feedback Section */
+
 .feedbackSection {
-    background-color: #ebf8ff; /* bg-blue-100 */
-    padding: 2rem; /* p-8 */
-    border-radius: 0.75rem; /* rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    background-color: #ebf8ff; 
+    padding: 2rem;
+    border-radius: 0.75rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-/* Feedback Header */
+
 .feedbackHeader {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 600; /* font-semibold */
-    margin-bottom: 1.5rem; /* mb-6 */
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    margin-bottom: 1.5rem; 
 }
 
-/* Peer Comment List */
 .peerCommentsList {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* space-y-4 */
+    gap: 1rem; 
 }
 
-/* Individual Peer Comment */
 .peerComment {
     background-color: white;
-    padding: 1rem; /* p-4 */
-    border-radius: 0.75rem; /* rounded-lg */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-md */
+    padding: 1rem; 
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .commentText {
-    color: #4b5563; /* text-gray-700 */
+    color: #4b5563;
 }
 
-/* No Reviews Text */
 .noReviewsText {
-    color: #6b7280; /* text-gray-600 */
+    color: #6b7280; 
 }
 
-/* Loading Container */
 .loadingContainer {
     min-height: 100vh;
     display: flex;
@@ -122,64 +122,63 @@
     justify-content: center;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .pageContainer {
-        padding: 2rem; /* p-8 */
+        padding: 2rem; 
     }
 
     .header {
-        font-size: 2rem; /* text-3xl */
+        font-size: 2rem;
     }
 
     .paperCard {
-        padding: 1.25rem; /* p-5 */
-        margin-bottom: 2rem; /* mb-8 */
+        padding: 1.25rem;
+        margin-bottom: 2rem; 
     }
 
     .feedbackButton {
-        padding: 0.5rem; /* p-2 */
-        font-size: 0.875rem; /* text-sm */
+        padding: 0.5rem;
+        font-size: 0.875rem; 
     }
 
     .feedbackSection {
-        padding: 1.5rem; /* p-6 */
+        padding: 1.5rem; 
     }
 
     .peerComment {
-        padding: 0.75rem; /* p-3 */
+        padding: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .pageContainer {
-        padding: 1.5rem; /* p-6 */
+        padding: 1.5rem;
     }
 
     .header {
-        font-size: 1.75rem; /* text-2xl */
+        font-size: 1.75rem;
     }
 
     .paperCard {
-        padding: 1rem; /* p-4 */
+        padding: 1rem; 
     }
 
     .feedbackButton {
-        padding: 0.5rem; /* p-2 */
-        font-size: 0.875rem; /* text-sm */
-        width: 100%; /* Full width button on small screens */
+        padding: 0.5rem;
+        font-size: 0.875rem; 
+        width: 100%; 
         text-align: center;
     }
 
     .feedbackLinkContainer {
-        justify-content: center; /* Center the button on small screens */
+        justify-content: center; 
     }
 
     .peerCommentsList {
-        gap: 0.75rem; /* Reduced gap for small screens */
+        gap: 0.75rem;
     }
 
     .feedbackSection {
-        padding: 1rem; /* p-4 */
+        padding: 1rem; 
     }
 }

@@ -58,6 +58,7 @@ const PeerReview = () => {
                             <div>
                                 <h2 className={classes.paperTitle}>{paper.title}</h2>
                                 <p className={classes.paperAbstract}>{paper.abstract}</p>
+                                <p className={classes.paperAbstract}><b>Conference:</b> Cloud Computing</p>
                             </div>
                             <a
                                 href={`/peer-review/feedback?pid=${paper.pid}`}

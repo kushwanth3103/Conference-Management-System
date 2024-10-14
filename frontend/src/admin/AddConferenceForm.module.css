@@ -1,4 +1,10 @@
-/* src/styles/AddConferenceForm.module.css */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .formContainer {
     background-color: #fff;
     padding: 20px;
@@ -16,20 +22,20 @@
     text-align: center;
   }
   
-  /* Flex layout for form fields */
+
   .form {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
   
-  /* Labels */
+
   .label {
     font-weight: 500;
     color: #555;
   }
   
-  /* Inputs and Textareas */
+
   .input,
   .textarea,
   .dateInput {
@@ -38,7 +44,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-    resize: vertical; /* Allow textarea resizing */
+    resize: vertical; 
   }
   
   /* Button Styles */
@@ -50,14 +56,13 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    align-self: flex-start; /* Align button to the start of the form */
+    align-self: flex-start; 
   }
   
   .button:hover {
     background-color: #0056b3;
   }
   
-  /* Speaker Container Styles */
   .speakerContainer {
     margin-bottom: 16px;
     border: 1px solid #eee;
@@ -81,7 +86,7 @@
     background-color: #c82333;
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .formContainer {
       padding: 16px;
@@ -93,7 +98,7 @@
   
     .button,
     .removeButton {
-      width: 100%; /* Make buttons full-width on smaller screens */
+      width: 100%; 
       text-align: center;
     }
   }

@@ -1,133 +1,137 @@
-/* Reset browser default margins and paddings */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Ensure the body doesn't overflow horizontally */
+  
   body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
   
-  /* Main container */
   .container {
     min-height: 100vh;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 0; /* py-12 */
+    padding: 3rem 0; 
   }
   
-  /* Image styling */
+
   .image {
-    width: 50%; /* w-1/2 */
+    width: 50%; 
   }
   
-  /* Form container */
+
   .formContainer {
     background-color: white;
-    padding: 2rem; /* p-8 */
-    border-radius: 0.75rem; /* rounded-lg */
-    width: 50%; /* w-1/2 */
+    padding: 2rem; 
+    border-radius: 0.75rem; 
+    width: 50%; 
   }
   
-  /* Heading styling */
+
   .heading {
-    font-size: 2rem; /* text-2xl */
+    font-size: 2rem; 
     font-weight: bold;
-    margin-bottom: 1.5rem; /* mb-6 */
+    margin-bottom: 1.5rem; 
     text-align: center;
   }
   
-  /* Error message styling */
+
   .errorMessage {
-    color: #ef4444; /* text-red-500 */
-    margin-bottom: 1rem; /* mb-4 */
+    color: #ef4444;
+    margin-bottom: 1rem; 
     text-align: center;
   }
   
-  /* Success message styling */
+
   .successMessage {
-    color: #10b981; /* text-green-500 */
-    margin-bottom: 1rem; /* mb-4 */
+    color: #10b981; 
+    margin-bottom: 1rem; 
     text-align: center;
   }
   
-  /* Form group styling */
+
   .formGroup {
-    margin-bottom: 1.5rem; /* mb-6 */
+    margin-bottom: 1.5rem; 
   }
   
-  /* Label styling */
+
   .label {
     display: block;
-    font-size: 0.875rem; /* text-sm */
-    font-weight: 500; /* font-medium */
-    color: #374151; /* text-gray-700 */
+    font-size: 0.875rem; 
+    font-weight: 500; 
+    color: #374151; 
   }
   
-  /* Input field styling */
+
   .inputField {
-    margin-top: 0.25rem; /* mt-1 */
+    margin-top: 0.25rem; 
     display: block;
     width: 100%;
-    padding: 0.5rem 1rem; /* px-4 py-2 */
-    border-radius: 0.5rem; /* rounded-lg */
-    border: 1px solid #d1d5db; /* border-gray-300 */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-sm */
+    padding: 0.5rem 1rem; 
+    border-radius: 0.5rem; 
+    border: 1px solid #d1d5db; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
   }
   
-  /* Focus effect for input fields */
+
   .inputField:focus {
-    outline: none; /* Removes default focus outline */
-    border: 2px solid #a855f7; /* Simulates border color change */
-    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.5); /* Simulates the ring effect */
+    outline: none; 
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.5); 
   }
   
-  /* Button styling */
   .button {
-    width: 100%; /* w-full */
-    background-color: #7c3aed; /* bg-purple-600 */
+    width: 100%; 
+    background-color: #7c3aed; 
     color: white;
-    padding: 0.75rem; /* py-3 */
-    border-radius: 0.5rem; /* rounded-lg */
-    font-weight: 600; /* font-semibold */
+    padding: 0.75rem; 
+    border-radius: 0.5rem; 
+    font-weight: 600; 
     transition: background-color 0.3s ease;
   }
   
-  /* Hover effect for button */
+
   .button:hover {
-    background-color: #6b21a8; /* hover:bg-purple-700 */
+    background-color: #6b21a8; 
   }
   
-  /* Disabled button state */
+
   .buttonDisabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
   
-  /* Link container styling */
+
   .linkContainer {
-    margin-top: 1rem; /* mt-4 */
+    margin-top: 1rem; 
     text-align: center;
   }
   
-  /* Link styling */
+
   .link {
-    color: #7c3aed; /* text-purple-500 */
+    color: #7c3aed; 
     text-decoration: none;
   }
   
-  /* Hover effect for link */
+
   .link:hover {
     text-decoration: underline;
   }
   
-  /* Responsive styles for smaller screens */
+
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
@@ -135,38 +139,38 @@
     }
   
     .image {
-      width: 100%; /* Make image take full width */
-      margin-bottom: 2rem; /* Add space below the image */
+      width: 100%; 
+      margin-bottom: 2rem;
     }
   
     .formContainer {
-      width: 100%; /* Make form take full width */
+      width: 100%; 
     }
   
     .heading {
-      font-size: 1.75rem; /* Slightly smaller heading */
+      font-size: 1.75rem;
     }
   
     .inputField, .button {
-      font-size: 0.875rem; /* Slightly reduce text size for inputs and button */
+      font-size: 0.875rem;
     }
   }
   
   @media (max-width: 480px) {
     .container {
-      padding: 1rem; /* Less padding for very small screens */
+      padding: 1rem; 
     }
   
     .heading {
-      font-size: 1.5rem; /* Further reduce heading size */
+      font-size: 1.5rem; 
     }
   
     .inputField, .button {
-      font-size: 0.75rem; /* Further reduce text size for inputs and button */
+      font-size: 0.75rem; 
     }
   
     .image {
-      display: none; /* Hide image on very small screens for better UX */
+      display: none;
     }
   }
   

@@ -1,33 +1,39 @@
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding: 3rem 1rem; /* Padding for larger screens */
+  padding: 3rem 1rem; 
 }
 
-/* Adjust formWrapper width for smaller screens */
 .formWrapper {
   background-color: white;
-  padding: 2rem; /* Equivalent to p-8 */
-  border-radius: 0.75rem; /* Rounded corners */
-  width: 100%; /* Full width on small screens */
-  max-width: 500px; /* Maximum width for larger screens */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  padding: 2rem; 
+  border-radius: 0.75rem; 
+  width: 100%; 
+  max-width: 500px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .title {
-  font-size: 1.5rem; /* Equivalent to text-2xl */
-  font-weight: bold; /* Bold font */
-  margin-bottom: 1.5rem; /* Margin at the bottom */
-  text-align: center; /* Centered text */
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  margin-bottom: 1.5rem;
+  text-align: center; 
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Space between form elements */
+  gap: 1.5rem;
 }
 
 .formGroup {
@@ -36,44 +42,44 @@
 }
 
 .label {
-  font-size: 0.875rem; /* Small text size */
-  font-weight: 500; /* Medium font weight */
-  margin-bottom: 0.5rem; /* Margin at the bottom */
-  color: #4a5568; /* Gray text */
+  font-size: 0.875rem; 
+  font-weight: 500; 
+  margin-bottom: 0.5rem;
+  color: #4a5568;
 }
 
 .input,
 .textarea {
-  padding: 0.5rem 1rem; /* Padding */
-  border: 1px solid #cbd5e0; /* Light border */
-  border-radius: 0.5rem; /* Rounded corners */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow */
-  transition: border-color 0.3s ease; /* Smooth transition for border on focus */
+  padding: 0.5rem 1rem; 
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+  transition: border-color 0.3s ease; 
 }
 
 .input:focus,
 .textarea:focus {
-  border-color: #4299e1; /* Blue border on focus */
-  outline: none; /* Remove default outline */
+  border-color: #4299e1; 
+  outline: none;
 }
 
 .submitButton {
-  background-color: #3182ce; /* Blue button background */
+  background-color: #3182ce;
   color: white;
-  padding: 0.75rem 1.5rem; /* Padding inside button */
-  border-radius: 0.5rem; /* Rounded corners */
-  font-weight: 600; /* Semi-bold font */
-  cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s ease; /* Smooth transition for background on hover */
+  padding: 0.75rem 1.5rem; 
+  border-radius: 0.5rem;
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 .submitButton:hover {
-  background-color: #2b6cb0; /* Darker blue on hover */
+  background-color: #2b6cb0;
 }
 
 .conferenceSelect {
-  width: 100%; /* Ensures the dropdown takes up the full width of its container */
-  max-width: 400px; /* Matches the max-width of the input fields */
+  width: 100%; 
+  max-width: 400px; 
   padding: 10px 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -81,49 +87,46 @@
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  appearance: none; /* Remove default arrow styling */
+  appearance: none; 
   cursor: pointer;
 }
 
-/* Style for the default option */
 .conferenceSelect option {
   color: #333;
 }
 
-/* Focused state for the select */
 .conferenceSelect:focus {
-  border-color: #3b82f6; /* Blue border on focus */
+  border-color: #3b82f6; 
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
   outline: none;
 }
 
 
-/* Media Query for Small Screens (Phones) */
 @media (max-width: 768px) {
   .container {
-    padding: 2rem 1rem; /* Reduce padding on small screens */
+    padding: 2rem 1rem; 
   }
 
   .conferenceSelect {
-    width: 100%; /* Ensures it takes up full width on smaller screens */
+    width: 100%; 
     font-size: 0.9rem;
   }
-  
+
   .formWrapper {
-    width: 100%; /* Full width on small screens */
-    padding: 1.5rem; /* Reduce padding */
+    width: 100%;
+    padding: 1.5rem;
   }
 
   .title {
-    font-size: 1.25rem; /* Slightly smaller title font size */
+    font-size: 1.25rem;
   }
 
   .input,
   .textarea {
-    padding: 0.5rem; /* Slightly smaller padding */
+    padding: 0.5rem; 
   }
 
   .submitButton {
-    padding: 0.5rem 1rem; /* Slightly smaller button padding */
+    padding: 0.5rem 1rem;
   }
 }

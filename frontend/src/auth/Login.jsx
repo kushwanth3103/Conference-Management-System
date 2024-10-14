@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import loginImage from '../assets/login.png';
 import { useNavigate } from 'react-router-dom';
 import { isLoggedIn } from "../utils/authUtils.js";
@@ -25,17 +24,24 @@ const Login = () => {
         setSuccess('');
 
         try {
-            // const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
-            // setLoading(false);
-            // setSuccess(response.data.message);
             if(email=='guest@gmail.com' && password=="Guest@123"){
-                localStorage.setItem('user', 'Guest');
+                localStorage.setItem('user', JSON.stringify({
+                    name:'Guest',
+                    email:'guest@gmail.com',
+                    phone:'+1 6746883789',
+                    expertise:'Cloud Computing',
+                    password:'Guest@123',
+                  }));
                 setEmail('');
                 setPassword('');
                 navigate('/');
             }
             else if(email=='admin@gmail.com' && password=="Admin@123"){
-                localStorage.setItem('user', 'Admin');
+                localStorage.setItem('user', JSON.stringify({
+                    name:'Admin',
+                    email:'admin@gmail.com',
+                    password:'Admin@123',
+                  }));
                 setEmail('');
                 setPassword('');
                 navigate('/admin');

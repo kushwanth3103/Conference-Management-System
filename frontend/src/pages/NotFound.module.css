@@ -1,22 +1,29 @@
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .notFoundContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Align items in a column */
-    height: 100vh; /* Full screen height */
+    flex-direction: column; 
+    height: 100vh; 
     text-align: center;
-    background-color: #f9fafb; /* Optional background color */
+    background-color: #f9fafb; 
 }
 
 .icon {
-    margin-bottom: 1rem; /* Equivalent to mb-4 in Tailwind */
-    font-size: 2.5rem; /* Equivalent to text-4xl */
-    color: #ef4444; /* Equivalent to text-red-500 */
+    margin-bottom: 1rem; 
+    font-size: 2.5rem; 
+    color: #ef4444; 
 }
 
 .title {
-    font-size: 2.5rem; /* Equivalent to text-4xl */
-    font-weight: 600; /* Equivalent to font-semibold */
-    color: #111827; /* Dark gray color for the text */
+    font-size: 2.5rem; 
+    font-weight: 600; 
+    color: #111827; 
     margin: 0;
 }

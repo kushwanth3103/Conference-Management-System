@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import styles from './AdminPage.module.css'; // Import the CSS Module
 import AddConferenceForm from './AddConferenceForm';
 import ComplaintsList from './ComplaintsList';
+import AddMentorForm from './AddMentorForm';
+import AddArticleForm from './AddArticleForm';
+import AddWorkshopForm from './AddWorkshopForm';
+import AddJobForm from './AddJobForm';
 
 const AdminPage = () => {
   const [activeSection, setActiveSection] = useState('addConference');
@@ -13,6 +17,14 @@ const AdminPage = () => {
         return <AddConferenceForm />;
       case 'viewComplaints':
         return <ComplaintsList/>
+      case 'addMentor':
+        return <AddMentorForm/>
+      case 'addArticle':
+        return <AddArticleForm/>
+      case 'addWorkshop':
+        return <AddWorkshopForm/>
+      case 'addJob':
+        return <AddJobForm/>
       default:
         return <AddConferenceForm />;
     }
@@ -38,6 +50,38 @@ const AdminPage = () => {
             onClick={() => setActiveSection('viewComplaints')}
           >
             View Complaints/Feedback
+          </li>
+          <li
+            className={`${styles.listItem} ${
+              activeSection === 'addMentor' ? styles.active : ''
+            }`}
+            onClick={() => setActiveSection('addMentor')}
+          >
+            Add Mentor
+          </li>
+          <li
+            className={`${styles.listItem} ${
+              activeSection === 'addArticle' ? styles.active : ''
+            }`}
+            onClick={() => setActiveSection('addArticle')}
+          >
+            Add Article
+          </li>
+          <li
+            className={`${styles.listItem} ${
+              activeSection === 'addWorkshop' ? styles.active : ''
+            }`}
+            onClick={() => setActiveSection('addWorkshop')}
+          >
+            Add Workshop
+          </li>
+          <li
+            className={`${styles.listItem} ${
+              activeSection === 'addJob' ? styles.active : ''
+            }`}
+            onClick={() => setActiveSection('addJob')}
+          >
+            Add Job
           </li>
         </ul>
       </div>

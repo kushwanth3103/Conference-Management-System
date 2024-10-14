@@ -24,7 +24,7 @@ const VideoConference = () => {
 
   useEffect(() => {
     // Initialize Socket.IO
-    socketRef.current = io('http://localhost:3000', {
+    socketRef.current = io('https://kxb6367.uta.cloud/', {
       withCredentials: true
     });
 
@@ -175,27 +175,7 @@ const VideoConference = () => {
   };
 
   const uploadRecording = async () => {
-    if (recordedChunks.length === 0) return;
-
-    const blob = new Blob(recordedChunks, { type: 'video/webm' });
-    const formData = new FormData();
-    formData.append('recording', blob, 'recording.webm');
-
-    try {
-      const response = await fetch('http://localhost:3000/api/recordings/upload', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (response.ok) {
-        console.log('Recording uploaded successfully');
-        setRecordedChunks([]);
-      } else {
-        console.error('Failed to upload recording');
-      }
-    } catch (error) {
-      console.error('Error uploading recording:', error);
-    }
+    
   };
 
   const addVideoStream = (stream, id, name) => {

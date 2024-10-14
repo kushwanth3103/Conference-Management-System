@@ -1,33 +1,39 @@
-/* Reset browser default margins and paddings */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Container with full viewport height and background */
+
 .container {
   min-height: 100vh;
   background-color: #f9fafb;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 16px; /* Reduced horizontal padding for smaller devices */
+  padding: 48px 16px; 
 }
 
-/* Wrapper with flex layout */
+
 .wrapper {
-  width: 90%; /* Reduce width for smaller screens */
-  max-width: 1200px; /* Keep max width for larger screens */
+  width: 90%; 
+  max-width: 1200px; 
   background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   display: flex;
-  flex-direction: column; /* Stack vertically on smaller screens */
+  flex-direction: column; 
   overflow: hidden;
 }
 
-/* Contact Info Section */
+
 .contactInfo {
   background-color: #1d4ed8;
   color: white;
@@ -35,62 +41,61 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: center; /* Center text for better readability */
+  text-align: center; 
 }
 
-/* Apply flex on larger screens */
+
 @media (min-width: 768px) {
   .wrapper {
-    flex-direction: row; /* Horizontal layout on larger screens */
+    flex-direction: row; 
   }
   
   .contactInfo {
-    width: 33%; /* Full height column on larger screens */
-    border-radius: 12px 0 0 12px; /* Keep left corners rounded */
-    text-align: left; /* Align text to left */
+    width: 33%; 
+    border-radius: 12px 0 0 12px; 
+    text-align: left; 
   }
 
   .formContainer {
-    width: 67%; /* Full width for form section */
+    width: 67%; 
   }
 }
 
-/* Additional styling for even smaller screens (below 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 32px 8px; /* Further reduce padding for very small screens */
+    padding: 32px 8px; 
   }
 
   .contactTitle {
-    font-size: 1.25rem; /* Smaller font for titles */
+    font-size: 1.25rem; 
   }
 
   .formTitle {
-    font-size: 1.75rem; /* Reduce font size for form title */
+    font-size: 1.75rem; 
   }
 
   .formSubtitle {
-    font-size: 0.875rem; /* Reduce subtitle font size */
+    font-size: 0.875rem; 
     margin-bottom: 24px;
   }
 
   .submitButton {
-    padding: 10px 0; /* Reduce padding on submit button */
+    padding: 10px 0; 
   }
 
   .mapPlaceholder {
-    height: 100px; /* Smaller height for map placeholder */
+    height: 100px; 
   }
 }
 
-/* Contact Info Titles and spacing */
+
 .contactTitle {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
-/* Info section layout */
+
 .infoSpace {
   margin-top: 16px;
   display: flex;
@@ -104,7 +109,7 @@
   gap: 8px;
 }
 
-/* Map section styling */
+
 .mapSection {
   margin-top: 48px;
 }
@@ -124,12 +129,12 @@
   margin-top: 16px;
 }
 
-/* Form section */
+
 .formContainer {
   padding: 32px;
 }
 
-/* Form title */
+
 .formTitle {
   font-size: 2.25rem;
   font-weight: 700;
@@ -137,14 +142,14 @@
   margin-bottom: 16px;
 }
 
-/* Subtitle */
+
 .formSubtitle {
   text-align: center;
   margin-bottom: 32px;
   color: #6b7280;
 }
 
-/* Flex form layout */
+
 .form {
   display: flex;
   flex-direction: column;
@@ -153,29 +158,29 @@
 
 .row {
   display: flex;
-  flex-direction: column; /* Stack inputs vertically on smaller screens */
+  flex-direction: column; 
   gap: 16px;
 }
 
 @media (min-width: 768px) {
   .row {
-    flex-direction: row; /* Align inputs in a row on larger screens */
+    flex-direction: row; 
   }
 }
 
-/* Form input container */
+
 .inputContainer {
   flex: 1;
 }
 
-/* Label styling */
+
 .label {
   font-size: 0.875rem;
   font-weight: 500;
   color: #4b5563;
 }
 
-/* Input field */
+
 .input, .textarea {
   width: 100%;
   padding: 8px 16px;
@@ -186,10 +191,10 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive Radio button group */
+
 .radioGroup {
   display: flex;
-  flex-direction: column; /* Stack vertically by default */
+  flex-direction: column; 
   gap: 16px;
   margin-top: 8px;
 }
@@ -211,31 +216,31 @@
   color: #4b5563;
 }
 
-/* Media query for larger screens */
+
 @media (min-width: 768px) {
   .radioGroup {
-    flex-direction: row; /* Align horizontally on larger screens */
+    flex-direction: row; 
     gap: 24px;
   }
 }
 
-/* Media query for smaller screens (below 480px) */
+
 @media (max-width: 480px) {
   .radioInput {
-    height: 20px; /* Increase size for better tap target on small screens */
+    height: 20px; 
     width: 20px;
   }
 
   .radioLabel {
-    font-size: 1rem; /* Increase font size for better readability */
+    font-size: 1rem; 
   }
 
   .radioItem {
-    gap: 12px; /* Adjust gap for smaller screens */
+    gap: 12px; 
   }
 }
 
-/* Submit button */
+
 .submitButton {
   width: 100%;
   background-color: #1d4ed8;
@@ -252,7 +257,7 @@
   background-color: #2563eb;
 }
 
-/* Center text utility */
+
 .textCenter {
   text-align: center;
 }

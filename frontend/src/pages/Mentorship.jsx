@@ -7,8 +7,8 @@ const Mentorship = () => {
     const [formData, setFormData] = useState({ name: '', email: '' });
 
     const mentors = [
-        { name: 'Elon Musk', expertise: 'AI, ML, Data Science', description: 'Expert in Artificial Intelligence and Machine Learning with over 10 years of experience.' },
-        { name: 'Elon Musk', expertise: 'AI, ML, Data Science', description: 'Expert in Artificial Intelligence and Machine Learning with over 10 years of experience.' }
+        { name: 'Elon Musk', expertise: 'AI, ML', description: 'Expert in Artificial Intelligence and Machine Learning with over 10 years of experience.' },
+        { name: 'Joe', expertise: 'AI, Cloud Computing', description: 'Expert in Artificial Intelligence and Machine Learning with over 10 years of experience.' }
     ];
 
     const timeSlots = [

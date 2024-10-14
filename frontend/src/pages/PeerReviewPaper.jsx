@@ -56,7 +56,7 @@ const PeerReviewPaper = () => {
                     <strong>Keywords:</strong> {paper.keywords}
                 </p>
                 <p className={classes.paperKeywords}>
-                    <strong>Conference:</strong> {paper.keywords}
+                    <strong>Conference:</strong> Cloud Computing
                 </p>
                 <div className={classes.feedbackLinkContainer}>
                     <button className={classes.feedbackButton}>

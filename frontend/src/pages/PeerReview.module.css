@@ -1,22 +1,28 @@
-/* Page Container */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .pageContainer {
     min-height: 100vh;
     background-color: #f9fafb;
     padding: 3rem;
 }
 
-/* Header Section */
+
 .headerSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .titleAndText {
     display: flex;
-    flex-direction: column; /* Stack title and paragraph vertically */
+    flex-direction: column; 
     gap: 0.5rem;
 }
 
@@ -27,11 +33,11 @@
 
 .infoText {
     font-size: 0.875rem;
-    color: #6b7280; /* Text color matching the design */
+    color: #6b7280; 
     margin-top: 0.25rem;
 }
 
-/* Submission Button */
+
 .mySubmissionButton {
     background-color: #6b46c1;
     color: white;
@@ -40,14 +46,14 @@
     font-weight: 600;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    margin-left: auto; /* Push button to the far right */
+    margin-left: auto; 
 }
 
 .mySubmissionButton:hover {
     background-color: #553c9a;
 }
 
-/* Custom Paragraph Section */
+
 .customParagraphContainer {
     background-color: #f3f4f6;
     padding: 1.5rem;
@@ -63,14 +69,14 @@
     font-size: 1rem;
 }
 
-/* Papers List */
+
 .papersList {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-/* Paper Item Styling */
+
 .paperItem {
     background-color: white;
     padding: 1.5rem;
@@ -78,29 +84,29 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensure button is pushed to the right */
-    flex-wrap: nowrap; /* Prevent content wrapping */
-    gap: 1rem; /* Add spacing between content and button */
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    gap: 1rem; 
 }
 
-/* Content of the Paper */
+
 .paperContent {
-    flex: 1; /* Allow the content to take available space */
+    flex: 1; 
 }
 
-/* Paper Title */
+
 .paperTitle {
     font-size: 1.25rem;
     font-weight: 600;
 }
 
-/* Paper Abstract */
+
 .paperAbstract {
     margin-top: 0.5rem;
     color: #4b5563;
 }
 
-/* Review Button */
+
 .reviewButton {
     background-color: #6b46c1;
     color: white;
@@ -109,15 +115,15 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-    white-space: nowrap; /* Prevent button text from wrapping */
+    white-space: nowrap; 
 }
 
-/* Hover Effect for Review Button */
+
 .reviewButton:hover {
     background-color: #553c9a;
 }
 
-/* No Papers Container */
+
 .noPapersContainer {
     min-height: 80vh;
     display: flex;
@@ -155,7 +161,7 @@
     text-align: center;
 }
 
-/* Loading Container */
+
 .loadingContainer {
     min-height: 100vh;
     background-color: #f9fafb;
@@ -164,7 +170,7 @@
     justify-content: center;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .headerSection {
         flex-direction: column;
@@ -181,12 +187,12 @@
     }
 
     .paperItem {
-        flex-direction: row; /* Ensure row layout on tablets */
+        flex-direction: row; 
         align-items: center;
     }
 
     .reviewButton {
-        margin-left: auto; /* Keep the button aligned right */
+        margin-left: auto; 
     }
 
     .noPapersBox {
@@ -209,12 +215,12 @@
     }
 
     .paperItem {
-        flex-direction: column; /* Stack content on mobile */
+        flex-direction: column; 
         align-items: stretch;
     }
 
     .reviewButton {
-        align-self: flex-end; /* Align the button to the right on mobile */
+        align-self: flex-end; 
     }
 
     .paperTitle {

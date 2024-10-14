@@ -1,29 +1,31 @@
-/* Main app container, ensuring minimum height covers at least 100% of the viewport */
-
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
 
 .appContainer {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f9fafb; /* Light background */
+    background-color: #f9fafb; 
   }
   
-  /* Main content area with padding */
   .mainContent {
     flex-grow: 1;
-    background-color: white; /* Optional, but ensures consistency */
+    background-color: white; 
   }
   
-  /* Navbar styling */
   .navBar {
-    background-color: #1d4ed8; /* Blue background for the Navbar */
+    background-color: #1d4ed8; 
     color: white;
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
   .navBar a {
@@ -35,12 +37,11 @@
   }
   
   .navBar a:hover {
-    color: #fbbf24; /* Yellow color on hover */
+    color: #fbbf24; 
   }
   
-  /* Footer styling */
   .footer {
-    background-color: #1e293b; /* Darker background for footer */
+    background-color: #1e293b; 
     color: white;
     padding: 1.5rem;
     text-align: center;
@@ -52,15 +53,14 @@
   }
   
   .footer a {
-    color: #a855f7; /* Purple color for links in footer */
+    color: #a855f7; 
     transition: color 0.3s ease;
   }
   
   .footer a:hover {
-    color: #d946ef; /* Darker purple on hover */
+    color: #d946ef; 
   }
   
-  /* For the protected routes transition */
   .protectedRoute {
     animation: fadeIn 0.5s ease-in-out;
   }
@@ -74,7 +74,6 @@
     }
   }
   
-  /* Responsive styles */
   @media (max-width: 768px) {
     .navBar {
       flex-direction: column;

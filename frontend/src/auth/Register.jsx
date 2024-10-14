@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
 import registerImage from '../assets/register.png';
 import styles from './Register.module.css';  // Import your CSS module
+import Multiselect from 'multiselect-react-dropdown';
+import { CONFERENCES } from '../utils/dataConferences';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -13,42 +14,21 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [conferences,setConferences]=useState([]);
+
+  useEffect(() => {
+      const conferenceNames = CONFERENCES.map((conference) => ({
+          name: conference.conferenceName // Create an object with a "name" property
+      }));
+      setConferences(conferenceNames);
+  }, []);
 
   const handleRegister = async () => {
-    if (password !== confirmPassword) {
-      setError('Passwords do not match.');
-      return;
-    }
-
-    setLoading(true);
-    setError('');
-    setSuccess('');
-
-    try {
-      const response = await axios.post('http://localhost:3000/api/users/register', {
-        name,
-        email,
-        phone,
-        expertise,
-        password,
-      });
-
-      setLoading(false);
-      setSuccess(response.data.message);
-      localStorage.setItem('user', JSON.stringify(response.data.user));
-      setName('');
-      setEmail('');
-      setPhone('');
-      setExpertise('');
-      setPassword('');
-      setConfirmPassword('');
-
-      window.location.href = '/login';
-    } catch (err) {
-      setLoading(false);
-      setError(err.response?.data?.error || 'An error occurred. Please try again.');
-    }
+   
   };
+
+  const onSelect=()=>{}
+  const onRemove=()=>{}
 
   return (
     <div className={styles.container}>
@@ -85,20 +65,16 @@ const Register = () => {
               className={styles.inputField}
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Select area of Expertise</label>
-            <select
-              value={expertise}
-              onChange={(e) => setExpertise(e.target.value)}
-              className={styles.inputField}
-            >
-              <option value="">Select area of Expertise</option>
-              <option value="Student">Student</option>
-              <option value="Researcher">Researcher</option>
-              <option value="Industry Professional">Industry Professional</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+          <div className={styles.formGroup}>
+                        <label className={styles.label}>Select your Area of Interest:</label>
+                        <Multiselect
+                        options={conferences} // Options to display in the dropdown
+                        selectedValues={[]} // Preselected value to persist in dropdown
+                        onSelect={onSelect} // Function will trigger on select event
+                        onRemove={onRemove} // Function will trigger on remove event
+                        displayValue="name" // Property name to display in the dropdown options
+                        />
+                    </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">Password</label>
             <input

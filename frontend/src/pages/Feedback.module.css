@@ -1,4 +1,10 @@
-/* Main Container */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .container {
   min-height: 100vh;
   background-color: #f9fafb;
@@ -7,7 +13,7 @@
   gap: 32px;
 }
 
-/* PDF Section */
+
 .pdfSection {
   width: 60%;
   background-color: white;
@@ -16,7 +22,7 @@
   padding: 16px;
 }
 
-/* Title Styling */
+
 .title {
   font-size: 1.5rem;
   text-align: center;
@@ -24,7 +30,7 @@
   font-weight: bold;
 }
 
-/* PDF Viewer Container */
+
 .pdfViewer {
   height: 85vh;
   background-color: #e5e7eb;
@@ -34,7 +40,7 @@
   justify-content: center;
 }
 
-/* No PDF Section Styling */
+
 .noPdf {
   height: 24rem;
   background-color: #e5e7eb;
@@ -45,7 +51,7 @@
   color: #6b7280;
 }
 
-/* Review Form Section */
+
 .reviewForm {
   width: 40%;
   background-color: #dbeafe;
@@ -54,33 +60,33 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Margins */
+
 .section {
   margin-bottom: 24px;
 }
 
-/* Radio Button Group Styling */
+
 .radioGroup {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-/* Radio Item Styling */
+
 .radioItem {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Radio Input Styling */
+
 .radioInput {
   width: 16px;
   height: 16px;
   border-radius: 50%;
 }
 
-/* Textarea Styling */
+
 .textarea {
   width: 100%;
   height: 8rem;
@@ -91,7 +97,7 @@
   font-size: 1rem;
 }
 
-/* Submit Button Styling */
+
 .submitButton {
   width: 100%;
   background-color: #2563eb;
@@ -107,41 +113,41 @@
   background-color: #1d4ed8;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
   .container {
-      flex-direction: column; /* Stack PDF section and review form */
+      flex-direction: column; 
       padding: 24px;
   }
 
   .pdfSection, .reviewForm {
-      width: 100%; /* Make both sections take full width */
+      width: 100%; 
   }
 
   .pdfViewer {
-      height: 50vh; /* Adjust PDF viewer height on smaller screens */
+      height: 50vh; 
   }
 }
 
 @media (max-width: 480px) {
   .container {
-      padding: 16px; /* Less padding on very small screens */
+      padding: 16px; 
   }
 
   .title {
-      font-size: 1.25rem; /* Smaller title size */
+      font-size: 1.25rem; 
   }
 
   .pdfViewer {
-      height: 40vh; /* Adjust PDF viewer height for small screens */
+      height: 40vh; 
   }
 
   .submitButton {
       padding: 10px;
-      font-size: 0.875rem; /* Smaller font for the button */
+      font-size: 0.875rem; 
   }
 
   .textarea {
-      height: 6rem; /* Adjust textarea height */
+      height: 6rem; 
   }
 }

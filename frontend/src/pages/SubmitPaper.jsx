@@ -15,6 +15,8 @@ const SubmitPaper = () => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
+    console.log('hi')
+    console.log(user)
     if (user) {
       setFormData({
         ...formData,
@@ -49,32 +51,7 @@ const SubmitPaper = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formSubmission = new FormData();
-    formSubmission.append('fullName', formData.fullName);
-    formSubmission.append('email', formData.email);
-    formSubmission.append('paperTitle', formData.paperTitle);
-    formSubmission.append('abstract', formData.abstract);
-    formSubmission.append('keywords', formData.keywords);
-    formSubmission.append('paperFile', formData.paperFile);
-
-    try {
-      const response = await fetch('http://localhost:3000/api/papers/submit', {
-        method: 'POST',
-        body: formSubmission,
-      });
-
-      if (response.ok) {
-        alert('Paper submitted successfully!');
-        window.location.href = '/peer-review/paper?pid=' + (await response.json()).paperId;
-      } else {
-        alert('Failed to submit paper. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error submitting paper:', error);
-      alert('An error occurred. Please try again later.');
-    }
+    
   };
 
   return (

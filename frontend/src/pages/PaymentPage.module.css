@@ -1,3 +1,10 @@
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .main {
     display: flex;
     flex-direction: column;
@@ -176,9 +183,7 @@
     cursor: pointer;
 }
 
-/* Media Queries for Responsiveness */
 
-/* Medium screens (tablets, 768px and below) */
 @media (max-width: 768px) {
     .paymentContainer {
         flex-direction: column;
@@ -207,7 +212,7 @@
     }
 }
 
-/* Small screens (mobile devices, 480px and below) */
+
 @media (max-width: 480px) {
     .main {
         padding: 1rem;

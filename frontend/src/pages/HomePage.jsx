@@ -39,7 +39,7 @@ const Announcements = () => {
 
                         <div className={styles.optionCard}>
                             <h3 className={styles.optionTitle}>Reserve your spot for participation.</h3>
-                            <a href="/select/virtual-conference" className={styles.optionLink}>
+                            <a href="/register/virtual-conference" className={styles.optionLink}>
                                 Register <i className="fas fa-link ml-1"></i>
                             </a>
                         </div>

@@ -1,70 +1,72 @@
-/* Reset browser default margins and paddings */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Prevent horizontal overflow */
   body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
   
-  /* Navbar container */
   .navbar {
-    background-color: #2563eb; /* Blue color */
+    background-color: #2563eb; 
     color: white;
-    padding: 1rem 2rem; /* Spacing around the content */
+    padding: 1rem 2rem; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensure the navbar spans the entire width */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     position: relative;
   }
   
-  /* Navbar Brand */
+
   .navbarBrand {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Space between icon and title */
+    gap: 1rem; 
   }
   
-  /* Navbar Icon (home icon) */
   .navbarIcon {
-    font-size: 1.5rem; /* Icon size */
+    font-size: 1.5rem; 
   }
   
-  /* Navbar Title */
+
   .navbarTitle {
-    font-size: 1.25rem; /* Title size */
+    font-size: 1.25rem; 
     font-weight: bold;
   }
   
-  /* Nav links container */
+
   .navLinks {
     display: flex;
-    list-style: none; /* Remove bullet points */
-    gap: 1.5rem; /* Space between links */
+    list-style: none; 
+    gap: 1.5rem; 
   }
   
-  /* Each navigation link */
+
   .navLink {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease; /* Smooth transition on hover */
+    transition: color 0.2s ease; 
   }
   
-  /* Hover effect for navigation links */
+
   .navLink:hover {
     text-decoration: underline;
-    color: #d1d5db; /* Lighter color on hover */
+    color: #d1d5db; 
   }
   
-  /* Logout link */
   .logoutLink {
     cursor: pointer;
     color: white;
@@ -72,57 +74,55 @@
     transition: color 0.2s ease;
   }
   
-  /* Hover effect for logout link */
   .logoutLink:hover {
     text-decoration: underline;
     color: #d1d5db;
   }
   
-  /* Responsive Styles for small screens */
   @media (max-width: 768px) {
     .navbar {
-      flex-direction: column; /* Stack content vertically */
+      flex-direction: column; 
       padding: 1rem;
     }
   
     .navbarBrand {
-      margin-bottom: 1rem; /* Add space between brand and nav links */
+      margin-bottom: 1rem; 
     }
   
     .navLinks {
-      flex-direction: column; /* Stack links vertically */
-      gap: 0.75rem; /* Reduce gap between links */
+      flex-direction: column; 
+      gap: 0.75rem; 
     }
   
     .navbarTitle {
-      font-size: 1.15rem; /* Adjust title size for smaller screens */
+      font-size: 1.15rem; 
     }
   
     .navbarIcon {
-      font-size: 1.25rem; /* Adjust icon size for smaller screens */
+      font-size: 1.25rem; 
     }
   
     .navLink, .logoutLink {
-      font-size: 1rem; /* Make nav link font slightly smaller */
+      font-size: 1rem; 
     }
   }
   
-  /* Extra small screens */
+
   @media (max-width: 480px) {
     .navbar {
       padding: 0.5rem 1rem;
     }
   
     .navbarTitle {
-      font-size: 1rem; /* Further reduce title size */
+      font-size: 1rem; 
     }
   
     .navLink, .logoutLink {
-      font-size: 0.9rem; /* Reduce font size further */
+      font-size: 0.9rem; 
     }
   
     .navLinks {
-      gap: 0.5rem; /* Further reduce gap */
+      gap: 0.5rem; 
     }
   }
   

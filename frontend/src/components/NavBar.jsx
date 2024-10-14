@@ -28,7 +28,6 @@ const NavBar = () => {
             <div>
                 <ul className={classes.navLinks}>
                     {location.pathname === '/admin' ? (
-                        // Show only the Logout button for /admin route
                         <li className={classes.logoutLink} onClick={handleLogout}>
                             Logout
                         </li>

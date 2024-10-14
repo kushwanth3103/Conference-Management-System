@@ -53,17 +53,6 @@ const RegisterVirtualConference = () => {
 
     const onSelect=()=>{}
     const onRemove=()=>{}
-    // if (!validateConferenceId(cid)) {
-    //     return (
-    //         <div className={styles.errorContainer}>
-    //             <div className={styles.errorMessage}>
-    //                 <h1 className={styles.errorTitle}>Invalid Conference ID</h1>
-    //                 <p>Please provide a valid conference ID to register for the conference.</p>
-    //                 <i className={`fas fa-exclamation-triangle ${styles.errorIcon}`}></i>
-    //             </div>
-    //         </div>
-    //     );
-    // }
 
     return (
         <div className={styles.container}>

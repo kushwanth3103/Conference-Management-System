@@ -12,7 +12,7 @@ const HomePage = () => {
     <div className={styles.container}>
         <div className={styles.header}>
           <h1>
-            Welcome to the UTA Conference Management 2024
+            Welcome
           </h1>
         </div>
         <div className={styles.grid}>

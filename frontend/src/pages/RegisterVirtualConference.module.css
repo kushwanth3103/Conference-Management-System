@@ -58,13 +58,17 @@
 
 .radioOption {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 0.5rem; /* Adjust gap between radio and text */
+    width: auto; /* Optional: To make sure the full space is used */
+}
+.radio {
+    margin: 0; /* Reset any default margin */
+    padding: 0; /* Reset any default padding */
+    flex-shrink: 0;
+    width: 2rem;
 }
 
-.radio {
-    margin-right: 0.5rem;
-}
 
 .subTitle {
     font-size: 1.125rem;

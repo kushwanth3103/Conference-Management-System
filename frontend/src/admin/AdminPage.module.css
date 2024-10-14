@@ -1,11 +1,16 @@
-/* src/styles/AdminPage.module.css */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .adminContainer {
     display: flex;
     height: 100vh;
     font-family: Arial, sans-serif;
   }
-  
-  /* Sidebar Styles */
+
   .sidebar {
     width: 250px;
     background-color: #f4f4f4;
@@ -50,7 +55,7 @@
     background-color: #e0e0e0;
   }
   
-  /* Content Section */
+
   .content {
     flex: 1;
     padding: 20px;
@@ -58,7 +63,7 @@
     background-color: #fff;
   }
   
-  /* Form Styles */
+
   form {
     display: flex;
     flex-direction: column;
@@ -92,14 +97,14 @@
     background-color: #0056b3;
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .adminContainer {
-      flex-direction: column; /* Stack sidebar and content vertically */
+      flex-direction: column; 
     }
   
     .sidebar {
-      width: 100%; /* Sidebar takes full width on smaller screens */
+      width: 100%; 
       border-right: none;
       border-bottom: 1px solid #ddd;
       align-items: center;
@@ -108,23 +113,23 @@
     .sidebar ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; /* Center the sidebar items */
+      justify-content: center; 
     }
   
     .sidebar ul li {
       margin: 5px;
       padding: 10px 15px;
-      font-size: 0.875rem; /* Smaller font size for mobile */
+      font-size: 0.875rem;
     }
   
     .content {
-      padding: 10px; /* Less padding on smaller screens */
+      padding: 10px; 
     }
   }
   
   @media (max-width: 480px) {
     .sidebar ul li {
-      width: 100%; /* Sidebar items take full width on very small screens */
+      width: 100%; 
     }
   
     form input,
@@ -133,7 +138,7 @@
     }
   
     form button {
-      width: 100%; /* Full width button on small screens */
+      width: 100%; 
     }
   }
   

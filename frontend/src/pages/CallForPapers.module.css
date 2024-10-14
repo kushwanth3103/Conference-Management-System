@@ -1,11 +1,18 @@
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .container {
-  padding: 20px; /* Reduce padding for smaller screens */
+  padding: 20px; 
 }
 
 .header {
   text-align: center;
   margin-bottom: 32px;
-  margin-top: 8px; /* Adjust margin for smaller screens */
+  margin-top: 8px; 
 }
 
 .grid {
@@ -16,29 +23,29 @@
 
 @media (min-width: 768px) {
   .container {
-    padding: 40px; /* Restore padding for larger screens */
+    padding: 40px; 
   }
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* Use 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* Use 3 columns on larger screens */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 .submissionGuidelines {
   background-color: #ebf8ff;
-  padding: 16px; /* Adjust padding for smaller screens */
+  padding: 16px; 
   border-radius: 12px;
 }
 
 .sectionTitle {
-  font-size: 1.125rem; /* Slightly smaller font size for mobile */
+  font-size: 1.125rem; 
   font-weight: 600;
-  margin-bottom: 12px; /* Adjust margin for better spacing */
+  margin-bottom: 12px; 
 }
 
 .guidelinesList {
@@ -54,18 +61,18 @@
 }
 
 .logo {
-  width: 12rem; /* Reduce logo size for smaller screens */
+  width: 12rem; 
 }
 
 @media (min-width: 768px) {
   .logo {
-    width: 16rem; /* Restore logo size for larger screens */
+    width: 16rem; 
   }
 }
 
 .importantDates {
   background-color: #fff7ed;
-  padding: 16px; /* Adjust padding for smaller screens */
+  padding: 16px; 
   border-radius: 12px;
 }
 
@@ -77,7 +84,7 @@
 .submitButton {
   background-color: #10b981;
   color: white;
-  padding: 10px 20px; /* Adjust padding for smaller screens */
+  padding: 10px 20px; 
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -94,14 +101,14 @@
 }
 
 .faqSection {
-  margin-top: 32px; /* Adjust spacing for smaller screens */
+  margin-top: 32px; 
 }
 
 .faqTitle {
   text-align: center;
-  font-size: 1.5rem; /* Slightly smaller font size for mobile */
+  font-size: 1.5rem; 
   font-weight: 700;
-  margin-bottom: 16px; /* Adjust margin for better spacing */
+  margin-bottom: 16px; 
 }
 
 .faqContainer {
@@ -112,13 +119,13 @@
 
 .faqItem {
   border: 1px solid #e5e7eb;
-  padding: 12px; /* Adjust padding for smaller screens */
+  padding: 12px; 
   border-radius: 12px;
 }
 
 .faqSummary {
   cursor: pointer;
-  font-size: 1rem; /* Slightly smaller font size for mobile */
+  font-size: 1rem; 
   font-weight: 600;
 }
 

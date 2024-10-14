@@ -1,4 +1,10 @@
-/* src/styles/ComplaintsList.module.css */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 .complaintsContainer {
     display: flex;
     flex-direction: column;
@@ -23,16 +29,16 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
   
-  /* Header containing user name and inquiry type */
+
   .complaintHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap; 
   }
   
-  /* User name styling */
+
   .userName {
     font-weight: 600;
     font-size: 1.2rem;
@@ -40,17 +46,17 @@
     margin-bottom: 5px;
   }
   
-  /* Inquiry type with badge styling */
+
   .inquiryType {
     font-size: 0.9rem;
     color: #4b5563;
     background-color: #e0f2fe;
     padding: 4px 8px;
     border-radius: 12px;
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: nowrap; 
   }
   
-  /* Contact information styling */
+
   .contactInfo {
     margin-bottom: 10px;
   }
@@ -61,17 +67,17 @@
     color: #555;
   }
   
-  /* Complaint message styling */
+
   .message {
     font-size: 1rem;
     color: #444;
     line-height: 1.5;
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .complaintsContainer {
-      padding: 15px; /* Adjust padding for smaller screens */
+      padding: 15px; 
       gap: 15px;
     }
   
@@ -91,7 +97,7 @@
   
   @media (max-width: 480px) {
     .complaintHeader {
-      flex-direction: column; /* Stack header items vertically */
+      flex-direction: column; 
       align-items: flex-start;
     }
   

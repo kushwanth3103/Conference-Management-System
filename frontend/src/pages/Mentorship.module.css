@@ -1,44 +1,50 @@
-/* Reset margins and paddings */
+/* Team Member Details:
+BOLLEPALLI KUSHWANTH SAI (1002156365)
+CHIKKALA GANATEJA ABHISHEK (1002165367)
+CHAUDHARI ADITRI NARENDRA (1002135981)
+CHEEPURUPALLI PRIYANKA (1002126548)
+CHATNA SUSHMITHA (1002164209) */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Main container with flexible height */
+
   .container {
-    min-height: calc(100vh - var(--nav-height) - var(--footer-height)); /* Height between navbar and footer */
-    padding: 3rem 1.5rem; /* py-12 */
-    background-color: #f9fafb; /* bg-gray-50 */
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height)); 
+    padding: 3rem 1.5rem; 
+    background-color: #f9fafb; 
   }
   
-  /* Header styling */
+ 
   .header {
-    font-size: 2.25rem; /* text-4xl */
-    font-weight: bold; /* font-bold */
+    font-size: 2.25rem; 
+    font-weight: bold; 
     text-align: center;
-    margin-bottom: 1rem; /* mb-4 */
+    margin-bottom: 1rem; 
   }
   
-  /* Subheader styling */
+  
   .subHeader {
     text-align: center;
-    color: #4b5563; /* text-gray-600 */
-    margin-bottom: 2rem; /* mb-8 */
+    color: #4b5563;
+    margin-bottom: 2rem; 
   }
   
-  /* Mentor container */
+
   .mentorContainer {
-    max-width: 90rem; /* max-w-7xl */
+    max-width: 90rem; 
     margin: 0 auto;
     background-color: white;
-    padding: 2rem; /* p-8 */
-    border-radius: 0.75rem; /* rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
-    margin-bottom: 3rem; /* mb-12 */
+    padding: 2rem; 
+    border-radius: 0.75rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 3rem; 
   }
   
-  /* Mentor profile */
+  
   .mentorProfile {
     display: flex;
     justify-content: space-between;
@@ -74,7 +80,7 @@
     max-width: 35%;
   }
   
-  /* Form container */
+
   .formContainer {
     max-width: 75rem;
     margin: 0 auto;
@@ -85,30 +91,30 @@
     margin-top: 1.5rem;
   }
   
-  /* Form group */
+
   .formGroup {
     margin-bottom: 1rem;
   }
   
   .formLabel {
     display: block;
-    font-size: 0.875rem; /* text-sm */
+    font-size: 0.875rem; 
     font-weight: 500;
-    color: #4b5563; /* text-gray-700 */
+    color: #4b5563; 
   }
   
-  /* Form input and select */
+
   .formInput, .formSelect {
     margin-top: 0.25rem;
     display: block;
     width: 100%;
     padding: 0.5rem 1rem;
-    border: 1px solid #d1d5db; /* border-gray-300 */
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-sm */
+    border: 1px solid #d1d5db; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
   }
   
-  /* Time slots container */
+
   .timeSlotsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -117,28 +123,28 @@
   
   .timeSlot {
     padding: 1rem;
-    border-radius: 0.5rem; /* Rounded corners */
+    border-radius: 0.5rem; 
     text-align: center;
-    border: 1px solid #d1d5db; /* Light border */
-    cursor: pointer; /* Add pointer cursor */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    border: 1px solid #d1d5db; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .timeSlot:hover {
-    background-color: #e5e7eb; /* Slightly darker background on hover */
+    background-color: #e5e7eb; 
 }
   
 .selectedTimeSlot {
-    background-color: #3b82f6; /* Blue background for selected */
+    background-color: #3b82f6; 
     color: white;
-    cursor: pointer; /* Ensure pointer cursor */
+    cursor: pointer; 
 }
 
 .unselectedTimeSlot {
     background-color: #f3f4f6;
 }
   
-  /* Submit button */
+
   .submitButton {
     background-color: #1d4ed8;
     color: white;
@@ -159,7 +165,7 @@
     text-align: center;
   }
   
-  /* Responsive styles for smaller screens */
+
   @media (max-width: 768px) {
     .mentorProfile {
       flex-direction: column;
@@ -173,33 +179,33 @@
     }
   
     .timeSlotsContainer {
-      grid-template-columns: 1fr; /* Single column for time slots */
+      grid-template-columns: 1fr; 
     }
   
     .container, .formContainer {
-      padding: 1.5rem; /* Adjust padding for smaller screens */
+      padding: 1.5rem; 
     }
   
     .formContainer {
-      width: 100%; /* Full width for smaller screens */
+      width: 100%;
     }
   
     .mentorContainer {
-      padding: 1.5rem; /* Adjust padding for mentor profiles */
+      padding: 1.5rem; 
     }
   }
   
   @media (max-width: 480px) {
     .header {
-      font-size: 1.75rem; /* Smaller font size for very small screens */
+      font-size: 1.75rem; 
     }
   
     .profileTitle {
-      font-size: 1.5rem; /* Smaller profile title for mobile */
+      font-size: 1.5rem; 
     }
   
     .submitButton {
-      font-size: 0.875rem; /* Smaller button text */
+      font-size: 0.875rem; 
     }
   }
   
